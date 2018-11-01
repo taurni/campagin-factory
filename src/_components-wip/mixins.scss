@@ -1,0 +1,70 @@
+@mixin clearFixer() {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin list-unstyled() {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+@mixin font-light() {
+    font-weight: $font-weight-light;
+    font-family: $font-lato-light;
+}
+
+@mixin font-regular() {
+    font-weight: $font-weight-regular;
+    font-family: $font-lato;
+}
+
+@mixin line-height($lineheight) {
+    $selector: #{&};
+    line-height: $lineheight;
+
+    @at-root {
+        .vision__line {
+            &--large {
+                #{$selector} {
+                    line-height: $lineheight *  $line-coeffitcent;
+                }
+
+                .vision__off #{$selector} {
+                    line-height: $lineheight;
+                }
+            }
+
+            &--extraLarge {
+                #{$selector} {
+                    line-height: $lineheight * $line-coeffitcent * 1.5;
+                }
+
+                .vision__off #{$selector} {
+                    line-height: $lineheight;
+                }
+            }
+        }
+    }
+}
+
+@mixin vision-height($par,$val) {
+    $selector: #{&};
+    @at-root {
+        .vision__line {
+            &--large #{$selector} {
+                #{$par}: $val * $line-coeffitcent;
+            }
+
+            &--extraLarge #{$selector} {
+                #{$par}: $val * $line-coeffitcent * 1.5;
+            }
+
+            .vision__off #{$selector} {
+                #{$par}: $val;
+            }
+        }
+    }
+}

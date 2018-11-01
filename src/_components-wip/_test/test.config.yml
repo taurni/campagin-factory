@@ -1,0 +1,21 @@
+
+context:
+  attrs:
+    data-drupal-selector: edit-field-tags-target-id
+    class:
+      - form-autocomplete
+      - customClass
+    data-autocomplete-path: "/rkas_dev/et/entity_reference_autocomplete/taxonomy_term/default/vMh_pWEm78LB5LErfBPkvrHL67k4MNLkiQAItu_-p5c"
+  test:
+    contact1:
+      title: Ettevõtte kontakt
+      content: '<p><strong>Riigi Kinnisvara AS <br>Lelle 24, Tallinn 11318<br>8. korrus</strong></p> <p><strong>Üldtelefon: 606 3400<br>Faks: 606 3401</strong></p> <p><strong>E-post: <a href="mailto:info@rkas.ee">info@rkas.ee</a></strong></p> <p><strong>Klienditugi</strong><br>+372 605 0000<br>klienditugi@rkas.ee</p>'
+      type: jaffa
+    contact2:
+      title: Ettevõtte andmed
+      content: '<p><strong>Riigi Kinnisvara AS<br>Reg-nr 10788733<br>KM reg-nr EE100708707</strong></p> <p><strong>Luminor</strong><br>EE901700017000429522</p> <p><strong>SWEDBANK</strong><br>EE892200221017592018</p> <p><strong>SEB</strong><br>EE101010220020067013</p>'
+      type: wisteria
+    contact3:
+      title: Transpordi- ja parkimisinfo
+      content: '<p>Külaliste parkimiskohad asuvad büroohoone vahetusläheduses ja on märgistatud viitega „<strong>RKAS külaline“</strong>.</p> <p>Parkimiskohtade täpse asukoha leiate <a href="#">siit.</a></p> <p>Meie juurde pääseb bussidega <strong>nr 66, 66a ja 66b.</strong>Maha tuleb tulla peatuses “Peatuse nimi”. Vaata täpsemaid bussigraafikuid <a href="#">siit</a>.</p>'
+      type: carissma

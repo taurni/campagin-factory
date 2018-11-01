@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ '/assets/img/favicon.ico'|path }}">
+    {% if _config.minify %}
+        <link media="all" rel="stylesheet" href="{{ '/assets/css/rkas.min.css'|path }}">
+    {% else %}
+        <link media="all" rel="stylesheet" href="{{ '/assets/css/rkas.css'|path }}">
+    {% endif %}
+
+    <title>{{ _target.label }} | Preview Layout</title>
+
+    {# Add tags to head #}
+    {% block headTags %}{% endblock %}
+</head>
+<body class="{{ bodyClass }} {{ _target.meta.bodyClass }}" style="
+{% for key, value in _target.display %}
+    {{ key }}: {{ value }};
+{% endfor %}
+        ">
+{% set x =  _target.display %}
+
+<div class="main-wrapper">
+    {{ yield }}
+</div>
+<script>
+    rkas = typeof rkas !== 'undefined' ? rkas : {};
+    rkas.svg_path = "{{ '/assets/svg/icons.svg'|path }}";
+</script>
+<script src="{{ '/assets/js/jquery.js'| path }}"></script>
+<script src="{{ '/assets/js/bower-plugins.js'| path }}"></script>
+<script src="{{ '/assets/js/rkas.js'| path }}"></script>
+<script src="{{ '/assets/js/utils.js'| path }}"></script>
+
+</body>
+</html>

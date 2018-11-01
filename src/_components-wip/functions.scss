@@ -1,0 +1,11 @@
+// Pixel to rem
+@function ptr($size) {
+    $remSize: $size / $font-size-base;
+    @return #{$remSize}rem;
+}
+
+// Pixel to em
+@function pte($size) {
+    $remSize: $size / $font-size-base;
+    @return #{$remSize}em;
+}

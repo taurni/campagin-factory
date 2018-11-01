@@ -1,0 +1,47 @@
+{
+  "name": "rkas",
+  "description": "",
+  "main": "",
+  "authors": [
+    ""
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~3.1.0",
+    "svg4everybody": "~2.1.0",
+    "cssua.js": "cssuseragent#~2.1.31",
+    "lazysizes": "~2.0.1",
+    "picturefill": "~3.0.2",
+    "MutationObserver-shim": "^0.3.1",
+    "sumoselect": "^3.0.2",
+    "bootstrap-daterangepicker": "^2.1.27",
+    "slick-carousel": "slick.js#^1.8.1",
+    "google-maps": "^3.2.1"
+  },
+  "overrides": {
+    "svg4everybody": {
+      "main": [
+        "dist/svg4everybody.js"
+      ]
+    },
+    "lazysizes": {
+      "main": [
+        "lazysizes.js",
+        "plugins/bgset/ls.bgset.js"
+      ]
+    },
+    "javascript-auto-complete": {
+      "main": [
+        "auto-complete.js"
+      ]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+node_modules
+bower_components
+tmp
+build
+src/**/**/*.html
+.sublime-gulp.cache
+bower_components
+report
+export
+.DS_Store
+.idea/
+public

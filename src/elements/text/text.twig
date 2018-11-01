@@ -1,0 +1,11 @@
+<div class="fragment component" data-component-id="text" data-component-name="richtext.component_text" contenteditable="false">
+    <div contenteditable="true" class="text-container">
+        {% if textContent%}
+            {{ textContent }}
+        {% else %}
+        {% block textContent %}
+        <p>Please type your text here.</p>
+        {% endblock %}
+        {% endif %}
+    </div>
+</div>
