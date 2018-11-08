@@ -1,0 +1,98 @@
+context:
+  groupId: 1539080342912
+  textColor: "#ffffff"
+
+  imageHref: "https://www.tallinksilja.com/lv/web/lv/club-one"
+  buttonHref: "https://www.tallink.lv/lv/find-a-cruise?col=1&colr=/lv/club-one"
+  buttonText: Ienākt
+  levelName: Bronze līmenis
+  levelPoints: Līmeņa punkti
+  levelEnd: 	Līmeņa derīguma termiņš
+  bonusPoints: Bonusa punkti
+  expThisMonth: Bonusa punkti derīgi līdz šī mēneša beigām
+  expNxtMonth: Bonusa punkti derīgi līdz nākamā mēneša beigām
+  manageAccount: Tavs Club One profils un labākie piedāvājumi
+
+variants:
+- name: default
+  context:
+    label: Default
+    index: 0
+    #    expression: ""
+    #    bgColor: "#004152"}
+    default: true
+    levelExpire: true
+    points: true
+    pointsExpire: true
+
+- name: B Lp0 Bp1 Exp1
+  context:
+    label: B Lp0 Bp1 Exp1
+    index: 1
+    expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.targetData.cusTierLevel === 'BRONZE')) && (/*@nlGroup*/(context.targetData.cusLevelPoints !== 0) || (context.targetData.cusBonusPoints !== 0)) && (/*@nlGroup*/(context.targetData.cusCurrentMonthsExpPoints !== 0) || (context.targetData.cusNextMonthsExpPoints !== 0))"
+    bgColor: "#004152"
+    points: true
+    pointsExpire: true
+- name: B LpBp1 Exp0
+  context:
+    label: B LpBp1 Exp0
+    index: 2
+    expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.targetData.cusTierLevel === 'BRONZE')) && (/*@nlGroup*/(context.targetData.cusLevelPoints !== 0) || (context.targetData.cusBonusPoints !== 0)) && (/*@nlGroup*/(context.targetData.cusCurrentMonthsExpPoints === 0) && (context.targetData.cusNextMonthsExpPoints === 0))"
+    bgColor: "#004152"
+    points: true
+- name: B All 0
+  context:
+    label: B All 0
+    index: 3
+    expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.targetData.cusTierLevel === 'BRONZE')) && (context.targetData.cusLevelPoints === 0) && (context.targetData.cusBonusPoints === 0) && (/*@nlGroup*/(context.targetData.cusCurrentMonthsExpPoints === 0) && (context.targetData.cusNextMonthsExpPoints === 0))"
+    bgColor: "#004152"
+
+- name: S All 1
+  context:
+    label: S All 1
+    index: 4
+    expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.targetData.cusTierLevel === 'SILVER')) && (/*@nlGroup*/(context.targetData.cusLevelPoints !== 0) || (context.targetData.cusBonusPoints !== 0)) && (/*@nlGroup*/(context.targetData.cusCurrentMonthsExpPoints !== 0) || (context.targetData.cusNextMonthsExpPoints !== 0))"
+    bgColor: "#a0aaaf"
+    levelName: 	Silver līmenis
+    points: true
+    pointsExpire: true
+- name: S LpBp1 Exp0
+  context:
+    label: S LpBp1 Exp0
+    index: 5
+    expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.targetData.cusTierLevel === 'SILVER')) && (/*@nlGroup*/(context.targetData.cusLevelPoints !== 0) || (context.targetData.cusBonusPoints !== 0)) && (/*@nlGroup*/(context.targetData.cusCurrentMonthsExpPoints === 0) && (context.targetData.cusNextMonthsExpPoints === 0))"
+    bgColor: "#a0aaaf"
+    levelName: 	Silver līmenis
+    points: true
+- name: S All 0
+  context:
+    label: S All 0
+    index: 6
+    expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.targetData.cusTierLevel === 'SILVER')) && (context.targetData.cusLevelPoints === 0) && (context.targetData.cusBonusPoints === 0) && (/*@nlGroup*/(context.targetData.cusCurrentMonthsExpPoints === 0) && (context.targetData.cusNextMonthsExpPoints === 0))"
+    bgColor: "#a0aaaf"
+    levelName: 	Silver līmenis
+
+- name: G All 1
+  context:
+    label: G All 1
+    index: 7
+    expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.targetData.cusTierLevel === 'GOLD')) && (/*@nlGroup*/(context.targetData.cusLevelPoints !== 0) || (context.targetData.cusBonusPoints !== 0)) && (/*@nlGroup*/(context.targetData.cusCurrentMonthsExpPoints !== 0) || (context.targetData.cusNextMonthsExpPoints !== 0))"
+    bgColor: "#b9a879;"
+    levelName: Gold līmenis
+    points: true
+    pointsExpire: true
+- name: G LpBp1 Exp0
+  context:
+    label: G LpBp1 Exp0
+    index: 8
+    expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.targetData.cusTierLevel === 'GOLD')) && (/*@nlGroup*/(context.targetData.cusLevelPoints !== 0) || (context.targetData.cusBonusPoints !== 0)) && (/*@nlGroup*/(context.targetData.cusCurrentMonthsExpPoints === 0) && (context.targetData.cusNextMonthsExpPoints === 0))"
+    bgColor: "#b9a879;"
+    levelName: Gold līmenis
+    points: true
+- name: G All 0
+  context:
+    label: G All 0
+    index: 9
+    expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.targetData.cusTierLevel === 'GOLD')) && (context.targetData.cusLevelPoints === 0) && (context.targetData.cusBonusPoints === 0) && (/*@nlGroup*/(context.targetData.cusCurrentMonthsExpPoints === 0) && (context.targetData.cusNextMonthsExpPoints === 0))"
+    bgColor: "#b9a879;"
+    levelName: Gold līmenis
