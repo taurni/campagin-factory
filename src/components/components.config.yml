@@ -1,2 +1,30 @@
 label: Komponendid
 hidden: true;
+variants:
+- name: default
+  label: Primaarne
+  context:
+    text: Tavaline
+    type: primary
+- name: secondary
+  context:
+    text: Tavaline
+    type: secondary
+- name: link
+  context:
+    text: Sulge
+    type: link
+- name: small
+  context:
+    text: small button
+    size: small
+    type: secondary
+- name: icon-text
+  notes: icon button with text
+  context:
+    text: Prindi
+    icon: "#printer"
+- name: icon
+  context:
+    type: mini
+    icon: "#menu"

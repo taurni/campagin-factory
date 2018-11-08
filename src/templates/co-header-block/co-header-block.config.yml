@@ -1,0 +1,23 @@
+context:
+  default: true
+  groupId: 1539080342912
+  label: Default
+  index: 0
+  expression: ""
+  bgColor: "#004152"
+  textColor: "#ffffff"
+
+  imageHref: "https://www.tallink.ee/et/club-one/"
+  buttonHref: "https://www.tallink.ee/et/club-one?col=1&amp;colr=/et/club-one"
+  buttonText: logi&nbsp;sisse
+  levelName: Pronkstase
+  levelPoints: Tasemepunktid
+  levelEnd: Taseme lõpp
+  bonusPoints: Boonuspunktid
+  expThisMonth: Sel kuul aeguvad
+  expNxtMonth: Järgmisel kuul aeguvad
+  manageAccount: Halda oma kontot ja vaata parimaid pakkumisi just Sulle
+
+  levelExpire: true
+  points: true
+  pointsExpire: true
