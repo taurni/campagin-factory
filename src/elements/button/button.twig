@@ -1,13 +1,16 @@
 {% set margin = buttonMargin|default(10) %}
-<div class="fragment component" data-component-id="button" style="width: 100%; text-align: left;" data-component-name="richtext.component_button" contenteditable="false">
-    <!--[if mso]><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="{{margin}}">&nbsp;</td></tr><tr><td style="text-align: left;"><![endif]-->
+{% set align = "left" %}
+{% if buttonAlign %} {% set align = buttonAlign %} {% endif %}
+
+<div class="fragment component" data-component-id="button" style="width: 100%; text-align: {{ align }};" data-component-name="richtext.component_button" contenteditable="false">
+    <!--[if mso]><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="{{margin}}">&nbsp;</td></tr><tr><td style="text-align: {{ align }};"><![endif]-->
     <div style="height: {{margin}}px">&nbsp;</div>
     <!--[if mso]>
         <table cellpadding="0" cellspacing="0" border="0">
         <tr><td width="17" bgcolor="#00ecc9">&nbsp;</td><td align="center" height="32" bgcolor="#00ecc9">
     <![endif]-->
     <div class="button-container" style="display:inline-block; text-align: center;color: #004152;background-color:#00ecc9;font-weight:bold;font-family:Arial, Helvetica, sans-serif;font-size:14px;text-transform:uppercase;padding-left: 17px;padding-right: 17px;padding-top:8px;padding-bottom: 8px; text-decoration: none; cursor: pointer">
-        <a href="#" style="text-align: center;margin: auto;max-width: 100%;display: inline-block;color: #004152;background-color:#00ecc9;font-weight:bold;font-family:Arial, Helvetica, sans-serif;font-size:14px;text-transform:uppercase; text-decoration: none; cursor: pointer" contenteditable="true">{{ buttonText | default("Button") }}</a>
+        <a href="{{ href|default("#") }}" style="text-align: center;margin: auto;max-width: 100%;display: inline-block;color: #004152;background-color:#00ecc9;font-weight:bold;font-family:Arial, Helvetica, sans-serif;font-size:14px;text-transform:uppercase; text-decoration: none; cursor: pointer" contenteditable="true">{{ buttonText | default("Button") }}</a>
     </div>
     <!--[if mso]></td><td width="17" bgcolor="#00ecc9">&nbsp;</td></tr></table><![endif]-->
     <!--[if mso]></td></tr></table><![endif]-->

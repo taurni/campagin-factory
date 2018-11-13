@@ -79,14 +79,14 @@ context:
       levelName: Kuldtase
 
 variants:
-- name: default
-  context:
-    label: Default
-    index: 0
-    #    expression: ""
-    #    bgColor: "#004152"}
-    default: true
-    levelExpire: true
-    points: true
-    pointsExpire: true
-- name: dynamic
+  - name: default
+    context:
+      label: Default
+      index: 0
+      #    expression: ""
+      #    bgColor: "#004152"}
+      default: true
+      levelExpire: true
+      points: true
+      pointsExpire: true
+  - name: dynamic
