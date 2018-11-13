@@ -1,0 +1,34 @@
+#variants:
+#  - name: first-name
+#    context:
+#      field: first-name
+#  - name: lst-name
+#    context:
+#      field: lst-name
+#  - name: account-no
+#    context:
+#      field: account-no
+#  - name: bonus-points
+#    context:
+#      field: bonus-points
+#  - name: tier-level
+#    context:
+#      field: tier-level
+#  - name: level-points
+#    context:
+#      field: level-points
+#  - name: cur-mo-exp
+#    context:
+#      field: cur-mo-exp
+#  - name: co-level-end
+#    context:
+#      field: co-level-end
+#  - name: nxt-mo-exp
+#    context:
+#      field: nxt-mo-exp
+#  - name: email
+#    context:
+#      field: email
+#  - name: email-token
+#    context:
+#      field: email-token
