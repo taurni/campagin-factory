@@ -15,3 +15,6 @@ Use this to create header translations.
 3) Copy content from **co-header-template.config.yml** into new-template.config.yml configuration file.
 
 4) Edit **new-template.config.yml** file as needed. 
+
+## Important!
+**Default version must be the last block**

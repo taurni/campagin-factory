@@ -1,3 +1,4 @@
+preview: "@preview--header"
 collated: false
 context:
   groupId: 1539080342912
@@ -15,15 +16,6 @@ context:
   manageAccount: Jūsų Club One profilis ir geriausi pasiūlymai
 
   versions:
-    - label: Default
-      index: 0
-      #    expression: ""
-      #    bgColor: "#004152"}
-      default: true
-      levelExpire: true
-      points: true
-      pointsExpire: true
-
     - label: B Lp0 Bp1 Exp1
       index: 1
       expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.targetData.cusTierLevel === 'BRONZE')) && (/*@nlGroup*/(context.targetData.cusLevelPoints !== 0) || (context.targetData.cusBonusPoints !== 0)) && (/*@nlGroup*/(context.targetData.cusCurrentMonthsExpPoints !== 0) || (context.targetData.cusNextMonthsExpPoints !== 0))"
@@ -77,6 +69,15 @@ context:
       expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.targetData.cusTierLevel === 'GOLD')) && (context.targetData.cusLevelPoints === 0) && (context.targetData.cusBonusPoints === 0) && (/*@nlGroup*/(context.targetData.cusCurrentMonthsExpPoints === 0) && (context.targetData.cusNextMonthsExpPoints === 0))"
       bgColor: "#b9a879;"
       levelName: Gold lygis
+
+    - label: Default
+      index: 0
+      #    expression: ""
+      #    bgColor: "#004152"}
+      default: true
+      levelExpire: true
+      points: true
+      pointsExpire: true
 
 variants:
   - name: default
