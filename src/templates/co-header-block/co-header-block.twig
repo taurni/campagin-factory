@@ -47,7 +47,8 @@
                                 <tr>
                                     <td align="right" style="border-collapse: collapse; color: {{ textColor|default("#ffffff")}}; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 18px; padding: 0; vertical-align: top;">
                                         {{levelName}} |
-                                        <a style="color:{{ textColor|default("#ffffff")}}; cursor: text">{% include "@dyn-field" with { field: "account-no"} %}</a>
+                                        {%- set text %}{%- include "@dyn-field" with { field: "account-no"} -%} {%- endset -%}
+                                        {% include "@static-text" with text %}
                                     </td>
                                     <td class="hpad" width="20" style="border-collapse: collapse; padding: 0;">
                                     </td>

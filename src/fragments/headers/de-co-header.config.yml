@@ -4,8 +4,8 @@ context:
   groupId: 1539080342912
   textColor: "#ffffff"
 
-  imageHref: "https://www.tallinksilja.com/en/club-one"
-  buttonHref: "https://www.tallink.com/"
+  imageHref: "https://www.tallinksilja.de/faehrreisen"
+  buttonHref: "https://www.tallinksilja.de/faehrreisen?col=1&colr=/club-one"
   buttonText: Login
   levelName: Bronze Level
   levelPoints: Level Punkte
@@ -39,17 +39,20 @@ context:
       levelName: Silber Leve
       points: true
       pointsExpire: true
+      levelExpire: true
     - label: S LpBp1 Exp0
       index: 5
       expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.targetData.cusTierLevel === 'SILVER')) && (/*@nlGroup*/(context.targetData.cusLevelPoints !== 0) || (context.targetData.cusBonusPoints !== 0)) && (/*@nlGroup*/(context.targetData.cusCurrentMonthsExpPoints === 0) && (context.targetData.cusNextMonthsExpPoints === 0))"
       bgColor: "#a0aaaf"
       levelName: Silber Leve
       points: true
+      levelExpire: true
     - label: S All 0
       index: 6
       expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.targetData.cusTierLevel === 'SILVER')) && (context.targetData.cusLevelPoints === 0) && (context.targetData.cusBonusPoints === 0) && (/*@nlGroup*/(context.targetData.cusCurrentMonthsExpPoints === 0) && (context.targetData.cusNextMonthsExpPoints === 0))"
       bgColor: "#a0aaaf"
       levelName: Silber Leve
+      levelExpire: true
 
     - label: G All 1
       index: 7
@@ -58,17 +61,20 @@ context:
       levelName: Gold Level
       points: true
       pointsExpire: true
+      levelExpire: true
     - label: G LpBp1 Exp0
       index: 8
       expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.targetData.cusTierLevel === 'GOLD')) && (/*@nlGroup*/(context.targetData.cusLevelPoints !== 0) || (context.targetData.cusBonusPoints !== 0)) && (/*@nlGroup*/(context.targetData.cusCurrentMonthsExpPoints === 0) && (context.targetData.cusNextMonthsExpPoints === 0))"
       bgColor: "#b9a879;"
       levelName: Gold Level
       points: true
+      levelExpire: true
     - label: G All 0
       index: 9
       expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.targetData.cusTierLevel === 'GOLD')) && (context.targetData.cusLevelPoints === 0) && (context.targetData.cusBonusPoints === 0) && (/*@nlGroup*/(context.targetData.cusCurrentMonthsExpPoints === 0) && (context.targetData.cusNextMonthsExpPoints === 0))"
       bgColor: "#b9a879;"
       levelName: Gold Level
+      levelExpire: true
 
     - label: Default
       index: 0

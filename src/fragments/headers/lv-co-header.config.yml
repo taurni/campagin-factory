@@ -39,17 +39,20 @@ context:
       levelName: 	Silver līmenis
       points: true
       pointsExpire: true
+      levelExpire: true
     - label: S LpBp1 Exp0
       index: 5
       expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.targetData.cusTierLevel === 'SILVER')) && (/*@nlGroup*/(context.targetData.cusLevelPoints !== 0) || (context.targetData.cusBonusPoints !== 0)) && (/*@nlGroup*/(context.targetData.cusCurrentMonthsExpPoints === 0) && (context.targetData.cusNextMonthsExpPoints === 0))"
       bgColor: "#a0aaaf"
       levelName: 	Silver līmenis
       points: true
+      levelExpire: true
     - label: S All 0
       index: 6
       expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.targetData.cusTierLevel === 'SILVER')) && (context.targetData.cusLevelPoints === 0) && (context.targetData.cusBonusPoints === 0) && (/*@nlGroup*/(context.targetData.cusCurrentMonthsExpPoints === 0) && (context.targetData.cusNextMonthsExpPoints === 0))"
       bgColor: "#a0aaaf"
       levelName: 	Silver līmenis
+      levelExpire: true
 
     - label: G All 1
       index: 7
@@ -58,17 +61,20 @@ context:
       levelName: Gold līmenis
       points: true
       pointsExpire: true
+      levelExpire: true
     - label: G LpBp1 Exp0
       index: 8
       expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.targetData.cusTierLevel === 'GOLD')) && (/*@nlGroup*/(context.targetData.cusLevelPoints !== 0) || (context.targetData.cusBonusPoints !== 0)) && (/*@nlGroup*/(context.targetData.cusCurrentMonthsExpPoints === 0) && (context.targetData.cusNextMonthsExpPoints === 0))"
       bgColor: "#b9a879;"
       levelName: Gold līmenis
       points: true
+      levelExpire: true
     - label: G All 0
       index: 9
       expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.targetData.cusTierLevel === 'GOLD')) && (context.targetData.cusLevelPoints === 0) && (context.targetData.cusBonusPoints === 0) && (/*@nlGroup*/(context.targetData.cusCurrentMonthsExpPoints === 0) && (context.targetData.cusNextMonthsExpPoints === 0))"
       bgColor: "#b9a879;"
       levelName: Gold līmenis
+      levelExpire: true
 
     - label: Default
       index: 0

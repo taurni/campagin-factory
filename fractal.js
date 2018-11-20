@@ -58,7 +58,13 @@ fractal.components.engine(twigAdapter);
 fractal.components.set('ext', '.twig');
 
 // Global context data that will be made available to all components when rendering previews,
-fractal.components.set('default.context', {});
+fractal.components.set('default.context', {
+    theme: {
+        bgColor: "#f5f8f7",
+        textColor: "#004152"
+    }
+
+});
 
 fractal.components.set('default.collated', true);
 
