@@ -1,0 +1,47 @@
+context:
+  seafoam: &sf "#f5f8f7"
+  midnight: &mn "#004152"
+  buoylight: &bl "#cdf8eb"
+  poollight: &pl "#c2f7ff"
+  sunset: &ss "#ffc8be"
+  white: &ff "#ffffff"
+
+variants:
+  - name: default
+    hidden: true
+
+  - name: Seafoam
+    context:
+      bgColor: *sf
+      textColor: *mn
+#      buttonBg:
+#      buttonColor:
+
+  - name: Midnight
+    context:
+      bgColor: *mn
+      textColor: *sf
+#      buttonBg:
+#      buttonColor:
+
+  - name: Buoylight
+    context:
+      bgColor: *bl
+      textColor: *mn
+#      buttonBg:
+#      buttonColor:
+
+  - name: Poollight
+    label: Pool light
+    context:
+      bgColor: *pl
+      textColor: *mn
+      buttonBg: *mn
+      buttonColor: *ff
+
+  - name: Sunset
+    context:
+      bgColor: *ss
+      textColor: *mn
+      buttonBg: *mn
+      buttonColor: *ff

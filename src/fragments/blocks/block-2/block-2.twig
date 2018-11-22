@@ -1,0 +1,68 @@
+<div class="fragment component" data-component-id="html" data-component-name="richtext.component_html">
+    <table align="center" bgcolor="{{ theme.bgColor }}" border="0" cellpadding="0" cellspacing="0" class="widthtable" style="min-width:650px;"
+           width="650">
+        <tbody>
+        <tr>
+            <td align="center">
+                <table border="0" cellpadding="0" cellspacing="0" class="innertable" width="550">
+                    <tbody>
+                    <tr>
+                        <td align="left" height="38"
+                            style="border-collapse:collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-line-height-rule: exactly; line-height: 38px;"
+                            valign="top">
+                            <!--[if gte mso 15]>&nbsp;<![endif]-->
+                        </td>
+                    </tr>
+                    <tr>
+                    </tr>
+                    <tr>
+                        <td class="innertable" valign="top" width="550">
+                            <!--[if gte mso 9]>
+                            <table cellpadding="0" cellspacing="0" border="0" width="550"><tr> <td valign="top">
+                            <![endif]-->
+                            {% include "@block" with {
+                                blockWidth: 266,
+                                blockImage: "https://www.tallink.ee/documents/10192/66843353/344x200_1.png",
+                                imageWidth: 266,
+                                blockTitle: "Lorem ipsum dolor",
+                                blockText: " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, quod, voluptas! Adipisci consectetur ipsa nobis quia voluptatem. Accusamus aliquam animi commodi.",
+                                blockButtonText: "Lorem ipsum"
+                            } %}
+                            <!--[if gte mso 9]></td><td valign="top"><![endif]-->
+                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="innertable" width="2">
+                                <tbody>
+                                <tr>
+                                    <td class="widthMainText" height="40" width="2">
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <!--[if gte mso 9]></td><td valign="top"><![endif]-->
+                            {% include "@block" with {
+                                blockWidth: 266,
+                                blockImage: "https://www.tallink.ee/documents/10192/66843353/344x200_b.png",
+                                imageWidth: 266,
+                                align: "right",
+                                blockTitle: "Lorem ipsum dolor",
+                                blockText: " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, quod, voluptas! Adipisci consectetur ipsa nobis quia voluptatem. Accusamus aliquam animi commodi.",
+                                blockButtonText: "Lorem ipsum"
+                            } %}
+                            <!--[if gte mso 9]></td>
+                            <td valign="top">
+                            <![endif]-->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" height="38"
+                            style="border-collapse:collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-line-height-rule: exactly; line-height: 38px;"
+                            valign="top">
+                            <!--[if gte mso 15]>&nbsp;<![endif]-->
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,18 @@
+variants:
+  - name: default
+    hidden: true
+  - name: Seafoam
+    context:
+      theme: '@theme--seafoam'
+  - name: midnight
+    context:
+      theme: '@theme--midnight'
+  - name: buoylight
+    context:
+      theme: '@theme--buoylight'
+  - name: poollight
+    context:
+      theme: '@theme--poollight'
+  - name: sunset
+    context:
+      theme: '@theme--sunset'

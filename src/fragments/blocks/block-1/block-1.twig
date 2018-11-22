@@ -1,5 +1,5 @@
 <div class="fragment component" data-component-id="html" data-component-name="richtext.component_html">
-    <table align="center" border="0" cellpadding="0" cellspacing="0" class="widthtable" style="min-width:650px;"
+    <table align="center" bgcolor="{{ theme.bgColor }}" border="0" cellpadding="0" cellspacing="0" class="widthtable" style="min-width:650px;"
            width="650">
         <tbody>
         <tr>
@@ -24,36 +24,10 @@
                                 <tbody>
                                 <tr>
                                     <td class="colspan1" data-name="Drag a new component here.">
-                                      {#  {% set imgOptions %}
-                                            {
-                                            imageSrc: blockImage,
-                                            {% if imageHeight %}imageHeight: {{imageHeight}} {% endif %}
-                                            {% if imageWidth %}imageWidth: {{imageWidth}} {% endif %}
-                                            }
-                                        {% endset %}#}
                                         {% include "@image" with {
                                             imageSrc: "https://www.tallink.ee/documents/10192/66843353/344x200_3.png",
-                                            imageHeight: "200.755",
                                             imageWidth: "266"
                                         } %}
-
-                                        {#<div class="fragment component image-container" contenteditable="false"
-                                             data-component-id="image" style="width: 100%; text-align: center;"
-                                             data-component-name="richtext.component_image"
-                                             data-thumbnail="http://res.messages.tallink.com/res/tallink_mkt_prod6/9bde99a433c485f4e1d4ea67ed0083d9a8f1c056bea93d60d4573f7a1473defe.png">
-                                            <!--[if mso]>
-                                            <table cellpadding="0" cellspacing="0" border="0" width="100%">
-                                                <tr>
-                                                    <td style="text-align: center;"><![endif]-->
-
-                                            <img alt="Vali oma õnnepäev" border="0" class="innertable heightAuto"
-                                                 contentid="73d203c-16290ccb022-6b01afd6fbb6724a9fe9ac1747b0e3f6"
-                                                 height="200.755" name="sndbh2eyg.jpg" spname="sndbh2eyg.jpg"
-                                                 src="https://www.tallink.ee/documents/10192/66843353/344x200_3.png"
-                                                 title="Vali oma õnnepäev" width="266" xt="SPIMAGE">
-
-                                            <!--[if mso]></td></tr></table><![endif]-->
-                                        </div>#}
                                     </td>
                                 </tr>
                                 </tbody>
@@ -75,11 +49,11 @@
                                 <tbody>
                                 <tr>
                                     <td align="left"
-                                        style="font-family:Arial, Helvetica, sans-serif; color:#004152; font-size:18px; line-height:20px; text-align:left; font-weight: bold;"
+                                        style="font-family:Arial, Helvetica, sans-serif; color:{{ theme.textColor }}; font-size:18px; line-height:20px; text-align:left; font-weight: bold;"
                                         valign="top">
 
                                         <a href="https://wwww.tallink.com" name="three_col_img_three"
-                                           style="font-family:Arial, Helvetica, sans-serif; color:#004152; font-size:16px; line-height:18px; text-align:left; font-weight: bold; text-decoration: none;"
+                                           style="font-family:Arial, Helvetica, sans-serif; color:{{ theme.textColor }}; font-size:16px; line-height:18px; text-align:left; font-weight: bold; text-decoration: none;"
                                            target="_blank" xt="SPCLICK"
                                            class="colspan1">
                                             {% include "@text" with {textContent:"LOREM IPSUM DOLOR"}%}
@@ -95,7 +69,7 @@
                                 </tr>
                                 <tr>
                                     <td class="colspan1" align="left"
-                                        style="font-family:Arial, Helvetica, sans-serif; color:#004152; font-size:14px; line-height:18px; text-align:left;"
+                                        style="font-family:Arial, Helvetica, sans-serif; color:{{ theme.textColor }}; font-size:14px; line-height:18px; text-align:left;"
                                         valign="top">
                                         {% embed "@text" %}
                                             {% block textContent %}
@@ -108,13 +82,6 @@
 
                                     </td>
                                 </tr>
-                                {#<tr>
-                                    <td align="left" height="14"
-                                        style="border-collapse:collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-line-height-rule: exactly; line-height: 14px;"
-                                        valign="top">
-                                        <!--[if gte mso 15]>&nbsp;<![endif]-->
-                                    </td>
-                                </tr>#}
                                 <tr>
                                     <td>
                                         <table align="left" border="0" cellpadding="0" cellspacing="0">
