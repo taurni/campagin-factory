@@ -3,7 +3,8 @@ context:
   midnight: &mn "#004152"
   buoylight: &bl "#cdf8eb"
   poollight: &pl "#c2f7ff"
-  sunset: &ss "#fac1b5"
+  sunset: &ss "#ffc8be"
+  white: &ff "#ffffff"
 
 variants:
   - name: default
@@ -36,11 +37,11 @@ variants:
       bgColor: *pl
       textColor: *mn
       buttonBg: *mn
-      buttonColor: *pl
+      buttonColor: *ff
 
   - name: Sunset
     context:
       bgColor: *ss
       textColor: *mn
-#      buttonBg: *mn
-#      buttonColor: *pl
+      buttonBg: *mn
+      buttonColor: *ff
