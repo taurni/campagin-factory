@@ -9,7 +9,7 @@
     <img src="{{ imageSrc|default("https://www.tallink.ee/documents/10192/66843353/344x200_1.png") }}"
          {% if imageWidth %}width="{{ imageWidth }}"{% endif %}
          {% if imageHeight %}height="{{ imageHeight }}"{% endif %}
-         style="display: block"
+         style="display: block; width: 100%;"
          alt="{{ imageAlt|default("Image alt text") }}"
          title="{{ imageName|default("Image title") }}"
          {#class="innertable heightAuto"#}
