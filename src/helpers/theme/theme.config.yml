@@ -20,7 +20,7 @@ variants:
   - name: Midnight
     context:
       bgColor: *mn
-      textColor: *sf
+      textColor: *ff
 #      buttonBg:
 #      buttonColor:
 
