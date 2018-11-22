@@ -1,6 +1,6 @@
 Helper component for define theme colors.
 
-Theme controls:
+Theme variables:
 * Bacground color: `bgColor`
 * Text color: `textColor`
 * Button background: `buttonBg`
