@@ -1,0 +1,80 @@
+{% embed "@co-footer-template" with { appTitle: "Ladda mobilapplikationen", logo: "combined", logoLink: "https://www.tallinksilja.se/hitta-resa"} %}
+    {% block left %}
+        <span align="left" style="font-family:Arial, Helvetica, sans-serif; color:{{ theme.textColor }}; font-size:12px; line-height:14px; text-align:left;">{{"KONTAKTA OSS:"|upper}}</span><br>
+        <br>
+
+        {# Club One #}
+        {% if clubone %}
+            {% include "@link" with {text:"Kontaktformulär", href:"https://www.tallinksilja.se/club-one-kontakta-oss-mail"} %}<br>
+            Information och bokning: {{ phone| default("+46 8 22 21 40") }}<br>
+            Tallink Silja AB, Box 27295, 115 74 Stockholm, Sverige<br>
+            {% include "@link" with {text:"www.clubone.se", href:"http://www.clubone.se/"} %}<br>
+        {% endif %}
+
+        {# Regular #}
+        {% if regular %}
+            Tallink Silja AB<br>
+            Tel: +46 (0)8 22 21 40<br>
+            E-post: {% include "@link" with {text:"info.sweden@tallinksilja.com", href:"mailto:info.sweden@tallinksilja.com"} %}<br>
+        {% endif %}
+
+        <br>
+        <span align="left" style="font-family:Arial, Helvetica, sans-serif; color:{{ theme.textColor }}; font-size:12px; line-height:14px; text-align:left;">{{"FÖRE DIN RESA:"|upper}}</span><br>
+        Samtliga resenärer till Finland, Estland och Lettland måste<br>
+        kunna uppvisa giltiga resehandlingar (pass eller nationellt id-kort).  {% include "@link" with {text:"Läs mer här.", href:"https://www.tallinksilja.se/bra-att-veta/resehandlingar"} %}<br>
+        <br>
+        <span align="left" style="font-family:Arial, Helvetica, sans-serif; color:{{ theme.textColor }}; font-size:12px; line-height:14px; text-align:left;">{{"HITTA HIT:"|upper}}</span><br>
+        Samtliga fartyg ankommer/avgår från Värtaterminalen.<br>
+        Terminalen når du från Gärdets tunnelbanestation, samt<br>
+        från busshållplatsen Värtahamnens färjeterminal. Följ<br>
+        skyltarna. {% include "@link" with {text:"Se karta över området.", href:"https://www.tallinksilja.se/documents/10192/19365365/terminal-map-update.pdf/066be3fa-3151-4b0d-a8df-65897f50c578"} %} <br>
+
+    {% endblock %}
+
+    {% block right %}
+        <span align="left" style="font-family:Arial, Helvetica, sans-serif; color:#F5F8F7; font-size:12px; line-height:14px; text-align:left;">FÖLJ OSS:</span><br>
+
+        <table border="0" cellpadding="0" cellspacing="0" width="184">
+            <tbody>
+            <tr>
+                <td>{% include "@social" with {media:"fb-s", url:"https://www.facebook.com/siljalinesverige"} %}</td>
+                <td>{% include "@social" with {media:"inst-s", url:"https://www.instagram.com/siljalinesverige/"} %}</td>
+                <td>{% include "@social" with {media:"twitter", url:"https://twitter.com/tallinksiljase"} %}</td>
+                <td>{% include "@social" with {media:"youtube", url:"https://www.youtube.com/user/tallinksiljasweden"} %}</td>
+            </tr>
+            <tr>
+                <td>{% include "@social" with {media:"fb-t", url:"https://www.facebook.com/tallinksverige"} %}</td>
+                <td>{% include "@social" with {media:"inst-t", url:"https://www.instagram.com/tallinksverige/"} %}</td>
+                <td>{% include "@social" with {media:"linkedin", url:"https://www.linkedin.com/company/tallink-silja-ab"} %}</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td align="left" colspan="4" height="20" style="border-collapse:collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-line-height-rule: exactly; line-height: 20px;" valign="top"><!--[if gte mso 15]>&nbsp;<![endif]--></td>
+            </tr>
+            </tbody>
+        </table>
+
+        <table align="right" border="0" cellpadding="0" cellspacing="0" class="innertable" width="266">
+            <tbody>
+            <tr>
+                <td align="left" style="font-family:Arial, Helvetica, sans-serif; color:{{ theme.textColor }}; font-size:12px; line-height:14px; text-align:left;">BOKA NU, BETALA SEN</td>
+            </tr>
+            <tr>
+                <td align="left">
+                    <table border="0" cellpadding="0" cellspacing="0" width="260">
+                        <tbody>
+                        <tr>
+                            <td height="30px" width="90"><img border="0" height="20px" name="Cont_0" src="https://cdn.klarna.com/1.0/shared/image/generic/logo/sv_se/basic/logo_white.png" style="display: block" width="85"></td>
+                        </tr>
+                        <tr>
+                            <td align="left" colspan="8" height="10" style="border-collapse:collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-line-height-rule: exactly; line-height: 10px;" valign="top"><!--[if gte mso 15]>&nbsp;<![endif]--></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+    {% endblock %}
+{% endembed %}

@@ -1,0 +1,27 @@
+{% set imgSrc %}
+    {% if media == "fb" %}http://res.messages.tallink.com/res/tallink_mkt_prod6/fa100c842c278b189d4aa7714af536f1cf85aee1b94b6780c00a36d864a63854.png{% endif %}
+    {% if media == "fb-s" %}http://res.messages.tallink.com/res/tallink_mkt_prod6/44eee783df7bb09c82ea282013acccf9ccaffa53c032563245d19e51dae59971.png{% endif %}
+    {% if media == "fb-t" %}http://res.messages.tallink.com/res/tallink_mkt_prod6/4b26557f9a9513278afd28d1001b6b5ed463d796b7a0941ccca14ff56821a705.png{% endif %}
+
+    {% if media == "inst" %}https://www.tallink.ee/documents/10192/66843353/in.png{% endif %}
+    {% if media == "inst-s" %}http://res.messages.tallink.com/res/tallink_mkt_prod6/4de3d058466f5e0f4c2255c9c07d76c3a604a2869f781e9fe1d3181d26766afb.png{% endif %}
+    {% if media == "inst-t" %}http://res.messages.tallink.com/res/tallink_mkt_prod6/619697926f52d0f817ba3198d5e473295776c78c2b5f6e370000fd6b48983254.png{% endif %}
+
+    {% if media == "twitter" %}http://res.messages.tallink.com/res/tallink_mkt_prod6/3e5681670574bc9d489d826dd82d775282a6220bee37e4e1fdb7815eff56d358.png{% endif %}
+    {#{% if media == "youtube" %}http://res.messages.tallink.com/res/tallink_mkt_prod6/35f94e663ae8158f82ef529ab06ad5d68776b148a1d05a2a8c460e3aab1ebcb3.png{% endif %}#}
+    {% if media == "youtube" %}https://www.tallink.ee/documents/10192/66843353/yt.png{% endif %}
+    {% if media == "linkedin" %}http://res.messages.tallink.com/res/tallink_mkt_prod6/b4d86438b9c03440e1c8b8d76c207dce85901f1b036ba5be1071830a34c041e5.png{% endif %}
+    {% if media == "draugiem" %}http://res.messages.tallink.com/res/tallink_mkt_prod6/fa1ac87e33ad4c7a14cc4a0d27c78d91dcf6406996c5a800f625639e6925674c.png{% endif %}
+{% endset %}
+
+{% set width %}
+    {%- if (media == "fb-s") or (media == "fb-t") or (media == "inst-s") or (media == "inst-t")%}60
+    {% elseif media == "youtube" %}40
+    {%- else -%}
+        30
+    {%- endif %}
+{% endset %}
+
+    <a href="{{ url }}" name="{{ name }}" target="_blank" style="color: {{ theme.textColor }}; text-decoration: none">
+        <img border="0" name="{{ name }}" src="{{imgSrc}}" style="display: block" width="{{width}}" xt="SPIMAGE" title="{{ title|default("social media") }}" alt="{{ alt|default("social mendia icon") }}">
+    </a>

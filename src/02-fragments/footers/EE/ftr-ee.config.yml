@@ -1,0 +1,20 @@
+collated: false
+variants:
+  - name: default
+    hidden: true
+
+  - name: CO
+    context:
+      clubone: true
+  - name: CO-unscribe
+    context:
+      clubone: true
+      unsubscribe: true
+
+  - name: regular
+    context:
+      regular: true
+  - name: regular-unscribe
+    context:
+      regular: true
+      unsubscribe: true

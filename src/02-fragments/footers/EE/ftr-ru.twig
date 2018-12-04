@@ -1,0 +1,57 @@
+{% embed "@co-footer-template"
+    with {appTitle: "Скачайте наше приложение",logo: "tallink",logoLink: "https://www.tallink.ee/ru/vali-reis"}
+%}
+    {% block left %}
+        <span align="left" style="font-family:Arial, Helvetica, sans-serif; color:{{ theme.textColor }}; font-size:12px; line-height:14px; text-align:left;">{{ "Бронирование и дополнительная информация"|upper}}</span><br>
+        <br>
+        {# Cntact #}
+        {% include "@link" with {text:"www.tallink.ee", href:"https://www.tallink.ee/ru"} %}<br>
+        17808 (0,85 €/звонок + тариф оператора связи)<br>
+        {# Club One #}
+        {% if clubone %}
+            Центр обслуживания Club One {% include "@link" with {text:"clubone@tallink.ee", href:"mailto:clubone@tallink.ee"} %}<br>
+        {% endif %}
+
+        {# Regular #}
+        {% if regular %}
+            Изменить бронирование можно по тел. 640 9804<br>
+            Из-за границы звоните по тел. +372 640 9808<br>
+        {% endif %}
+        <br>
+
+        {# Reply #}
+        Пожалуйста, не отвечайте на это письмо, воспользуйтесь {% include "@link" with {text:"анкетой обратной связи.", href:"https://www.tallink.ee/ru/tagasiside"} %}<br>
+        <br>
+
+        {# Unscribe #}
+        {%- if unsubscribe %}
+            При желании вы можете {% include "@optout" with {text:"отказаться от новостной рассылки.", href:"http://www.tallink.ee/ru/unsub/?unsub="} -%}.<br>
+            <br>
+        {%- endif -%}
+        {# Privacy #}
+        При использовании данных клиентов Tallink соблюдает {% include "@link" with {text:"принципы защиты личных данных.", href:"https://www.tallink.ee/ru/isikuandmete-kaitse"} %}<br>
+        <br>
+
+        {# Address #}
+        AS Tallink Grupp, ул. Садама 5/7, 10111 Таллинн<br>
+    {% endblock %}
+
+    {% block right %}
+        {# social media #}
+        <span align="left" style="font-family:Arial, Helvetica, sans-serif; color:{{ theme.textColor }}; font-size:12px; line-height:14px; text-align:left;">Социальные сети</span><br>
+
+        <table border="0" cellpadding="0" cellspacing="0" >
+            <tbody>
+            <tr>
+                <td>{% include "@social" with {media:"fb", url:"https://www.facebook.com/TallinkEesti"} %}</td>
+                <td>{% include "@social" with {media:"inst", url:"https://www.instagram.com/Tallink_ee/"} %}</td>
+                <td>{% include "@social" with {media:"youtube", url:"http://www.youtube.com/user/TallinkEesti"} %}</td>
+            </tr>
+
+            <tr>
+                <td align="left" colspan="3" height="20" style="border-collapse:collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-line-height-rule: exactly; line-height: 20px;" valign="top"><!--[if gte mso 15]>&nbsp;<![endif]--></td>
+            </tr>
+            </tbody>
+        </table>
+    {% endblock %}
+{% endembed %}

@@ -1,0 +1,15 @@
+collated: false
+variants:
+  - name: default
+    hidden: true
+
+  - name: CO
+    context:
+      clubone: true
+  - name: CO-gold
+    context:
+      clubone: true
+      phone: +46 (0)20 55 55 50
+  - name: regular
+    context:
+      regular: true

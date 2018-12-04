@@ -1,0 +1,57 @@
+{% embed "@co-footer-template"
+    with {appTitle: "Lae alla meie äpp",logo: "tallink",logoLink: "https://www.tallink.ee/et/vali-reis"}
+%}
+    {% block left %}
+        <span align="left" style="font-family:Arial, Helvetica, sans-serif; color:{{ theme.textColor }}; font-size:12px; line-height:14px; text-align:left;">{{ "Broneerimine ja reisiinfo"|upper}}</span><br>
+        <br>
+        {# Cntact #}
+        {% include "@link" with {text:"www.tallink.ee", href:"https://www.tallink.ee"} %}<br>
+        17808 (hind 85 senti/kõne + operaatoritasu)<br>
+        {# Club One #}
+        {% if clubone %}
+            Club One'i klienditeenindus {% include "@link" with {text:"clubone@tallink.ee", href:"mailto:clubone@tallink.ee"} %}<br>
+        {% endif %}
+
+        {# Regular #}
+        {% if regular %}
+            Broneeringut saad muuta tel 640 9804<br>
+            Välismaalt helista tel +372 640 9808<br>
+        {% endif %}
+        <br>
+
+        {# Reply #}
+        Palume sellele kirjale mitte vastata, vaid kasutada {% include "@link" with {text:"tagasiside vormi.", href:"https://www.tallink.ee/tagasiside"} %}<br>
+        <br>
+
+        {# Unscribe #}
+        {%- if unsubscribe %}
+            Kui soovid uudiskirja saamisest loobuda, {% include "@optout" with {text:"kliki siia", href:"http://www.tallink.ee/et/unsub/?unsub="} -%}.<br>
+            <br>
+        {%- endif -%}
+        {# Privacy #}
+        Tallink lähtub oma klientide andmete kasutamisel {% include "@link" with {text:"isikuandmete kaitse põhimõtetest.", href:"https://www.tallink.ee/et/isikuandmete-kaitse"} %}<br>
+        <br>
+
+        {# Address #}
+        AS Tallink Grupp, Sadama 5/7, 10111 Tallinn<br>
+    {% endblock %}
+
+    {% block right %}
+        {# social media #}
+        <span align="left" style="font-family:Arial, Helvetica, sans-serif; color:{{ theme.textColor }}; font-size:12px; line-height:14px; text-align:left;">JÄLGI MEID</span><br>
+
+        <table border="0" cellpadding="0" cellspacing="0" >
+            <tbody>
+            <tr>
+                <td>{% include "@social" with {media:"fb", url:"https://www.facebook.com/TallinkEesti"} %}</td>
+                <td>{% include "@social" with {media:"inst", url:"https://www.instagram.com/Tallink_ee/"} %}</td>
+                <td>{% include "@social" with {media:"youtube", url:"http://www.youtube.com/user/TallinkEesti"} %}</td>
+            </tr>
+
+            <tr>
+                <td align="left" colspan="3" height="20" style="border-collapse:collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-line-height-rule: exactly; line-height: 20px;" valign="top"><!--[if gte mso 15]>&nbsp;<![endif]--></td>
+            </tr>
+            </tbody>
+        </table>
+    {% endblock %}
+{% endembed %}
