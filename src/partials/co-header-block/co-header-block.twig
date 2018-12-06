@@ -47,7 +47,7 @@
                                 <tr>
                                     <td align="right" style="border-collapse: collapse; color: {{ textColor|default("#ffffff")}}; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 18px; padding: 0; vertical-align: top;">
                                         {{levelName}} |
-                                        {%- set text %}{%- include "@dyn-field" with { field: "account-no"} -%} {%- endset -%}
+                                        {% set text %}{% include "@dyn-field" with { field: "account-no"} %} {% endset %}
                                         {% include "@static-text" with text %}
                                     </td>
                                     <td class="hpad" width="20" style="border-collapse: collapse; padding: 0;">
@@ -62,7 +62,7 @@
                                     <td align="right" style="border-collapse: collapse; color:{{ textColor|default("#ffffff")}}; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 18px; padding: 0; vertical-align: top;">
                                         {{levelPoints|upper}}:
                                         {#<a style="color: {{ textColor|default("#ffffff")}}; cursor: text">{% include "@dyn-field" with { field: "level-points"} %}</a>#}
-                                        {%- set text %}{%- include "@dyn-field" with { field: "level-points"} -%} {%- endset -%}
+                                        {%- set text %}{%- include "@dyn-field" with { field: "level-points"} -%} {%- endset %}
                                         {% include "@static-text" with text %}
                                     </td>
                                     <td class="hpad" width="20" style="border-collapse: collapse; padding: 0;">
@@ -72,7 +72,7 @@
                                 {% if levelExpire %}
                                 <tr>
                                     <td align="right" style="border-collapse: collapse; color:{{ textColor|default("#ffffff")}}; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 18px; padding: 0; vertical-align: top;">
-                                        {{ levelEnd }}: {%- set text %}{%- include "@dyn-field" with { field: "co-level-end"} -%} {%- endset -%}
+                                        {{ levelEnd }}: {%- set text %}{%- include "@dyn-field" with { field: "co-level-end"} -%} {%- endset %}
                                         {% include "@static-text" with text %}
                                         {#<a style="color: {{ textColor|default("#ffffff")}}; cursor: text">{% include "@dyn-field" with { field: "co-level-end"} %}</a>#}
                                     </td>
@@ -88,7 +88,7 @@
                                 <tr>
                                     <td align="right" style="border-collapse: collapse; color:{{ textColor|default("#ffffff")}}; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 18px; padding: 0; vertical-align: top;">
                                         {{ bonusPoints|upper }}:
-                                        {%- set text %}{%- include "@dyn-field" with { field: "bonus-points"} -%} {%- endset -%}
+                                        {%- set text %}{%- include "@dyn-field" with { field: "bonus-points"} -%} {%- endset %}
                                         {% include "@static-text" with text %}
                                         {#<a style="color: {{ textColor|default("#ffffff")}}; cursor: text">{% include "@dyn-field" with { field: "bonus-points"} %}</a>#}
                                     </td>
@@ -100,7 +100,7 @@
                                 <tr>
                                     <td align="right" style="border-collapse: collapse; color:{{ textColor|default("#ffffff")}}; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 18px; padding: 0; vertical-align: top;">
                                         {{ expThisMonth }}:
-                                        {%- set text %}{%- include "@dyn-field" with { field: "cur-mo-exp"} -%} {%- endset -%}
+                                        {%- set text %}{%- include "@dyn-field" with { field: "cur-mo-exp"} -%} {%- endset %}
                                         {% include "@static-text" with text %}
                                         {#<a style="color: {{ textColor|default("#ffffff")}}; cursor: text">{% include "@dyn-field" with { field: "cur-mo-exp"} %}</a>#}
                                     </td>
@@ -110,7 +110,7 @@
                                 <tr>
                                     <td align="right" style="border-collapse: collapse; color: {{ textColor|default("#ffffff")}}; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 15px; padding: 0; vertical-align: top;">
                                         {{expNxtMonth}}:
-                                        {%- set text %}{%- include "@dyn-field" with { field: "nxt-mo-exp"} -%} {%- endset -%}
+                                        {%- set text %}{%- include "@dyn-field" with { field: "nxt-mo-exp"} -%} {%- endset %}
                                         {% include "@static-text" with text %}
                                         {#<a style="color: {{ textColor|default("#ffffff")}}; cursor: text">{% include "@dyn-field" with { field: "nxt-mo-exp"} %}</a>#}
                                     </td>
