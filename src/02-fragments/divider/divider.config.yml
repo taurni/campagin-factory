@@ -1,4 +1,4 @@
-order: 1
+
 variants:
   - name: default
     hidden: true
