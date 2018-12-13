@@ -1,15 +1,22 @@
 collated: false
+
+
 variants:
   - name: default
-    hidden: true
+    label: CO-dynamic
+    notes: Dynamic fragment GOLD/DEFAULT
+    context:
+      groupId: 1539080342923
+      clubone: true
+      versions:
+        - label: Gold
+          index: 1
+          expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.targetData.cusTierLevel === 'GOLD'))"
+          phone: +46 (0)20 55 55 50
+        - label: Default
+          index: 0
+          default: true
 
-  - name: CO
-    context:
-      clubone: true
-  - name: CO-gold
-    context:
-      clubone: true
-      phone: +46 (0)20 55 55 50
   - name: regular
     context:
       regular: true

@@ -6,7 +6,7 @@ variants:
   - name: CO
     context:
       clubone: true
-  - name: CO-unscribe
+  - name: CO-unsubscribe
     context:
       clubone: true
       unsubscribe: true
@@ -14,7 +14,7 @@ variants:
   - name: regular
     context:
       regular: true
-  - name: regular-unscribe
+  - name: regular-unsubscribe
     context:
       regular: true
       unsubscribe: true

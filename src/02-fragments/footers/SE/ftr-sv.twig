@@ -6,11 +6,14 @@
         {# Club One #}
         {% if clubone %}
             {% include "@link" with {text:"Kontaktformulär", href:"https://www.tallinksilja.se/club-one-kontakta-oss-mail"} %}<br>
-            Information och bokning: {{ phone| default("+46 8 22 21 40") }}<br>
+            {%- for version in versions %}
+                <div class="nl-dce-variant nl-dce-variant-block nl-dce-if nl-dce-multiconditional {% if version.default %}nl-dce-current-variant{% endif %}" data-component-id="html" data-component-name="richtext.component_html" data-nl-variant-group="{{ version.groupId }}" data-nl-variant-label="{{version.label}}" data-nl-variant-index="{{ version.index }}" data-nl-expr="{{ version.expression }}" data-nl-condition-type="multiple" {% if version.default %}data-nl-variant-default="true"{% endif %}>
+                    Information och bokning: {{ version.phone| default("+46 8 22 21 40") }}<br>
+                </div>
+            {%- endfor %}
             Tallink Silja AB, Box 27295, 115 74 Stockholm, Sverige<br>
             {% include "@link" with {text:"www.clubone.se", href:"http://www.clubone.se/"} %}<br>
         {% endif %}
-
         {# Regular #}
         {% if regular %}
             Tallink Silja AB<br>
