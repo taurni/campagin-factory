@@ -1,0 +1,52 @@
+{% embed "@co-footer-template" with { appTitle: "Ladda mobilapplikationen", logo: "combined", logoLink: "https://www.tallinksilja.fi"} %}
+    {% block left %}
+        <span align="left" style="font-family:Arial, Helvetica, sans-serif; color:{{ theme.textColor }}; font-size:12px; line-height:14px; text-align:left;">{{ "Kontaktinformation"|upper }}</span><br>
+        <br>
+        {%- for version in versions %}
+            <div class="nl-dce-variant nl-dce-variant-block nl-dce-if nl-dce-multiconditional {% if version.default %}nl-dce-current-variant{% endif %}" data-component-id="html" data-component-name="richtext.component_html" data-nl-variant-group="{{ version.groupId }}" data-nl-variant-label="{{version.label}}" data-nl-variant-index="{{ version.index }}" data-nl-expr="{{ version.expression }}" data-nl-condition-type="multiple" {% if version.default %}data-nl-variant-default="true"{% endif %}>
+                {% if version.content %}
+                    {{ version.content }}
+                {% else %}
+                    Club One -kunder<br>
+                    0600 152 68<br>
+                    (1,75 € / besvarat samtal + alltid lna/msa)<br>
+                {% endif %}
+            </div>
+        {%- endfor %}
+
+        <br>
+        Vi betjänar<br>
+        mån-fre 8-19<br>
+        lör-sön 9-17<br>
+        <br>
+        Du kan inte besvara detta e-postmeddelande, eftersom vi inte behandlar svaren.<br>
+        Adressregister: Club One -stamkundsregister<br>
+        Meddelandet är skickat till: {% include "@dyn-field" with { field: "email"} %}<br>
+    {% endblock %}
+
+    {% block right %}
+        <span align="left" style="font-family:Arial, Helvetica, sans-serif; color:#F5F8F7; font-size:12px; line-height:14px; text-align:left;">Följ oss</span><br>
+
+        <table border="0" cellpadding="0" cellspacing="0" width="184">
+            <tbody>
+            <tr>
+                <td>{% include "@social" with {media:"fb-s", url:"https://www.facebook.com/siljalinesuomi"} %}</td>
+                <td>{% include "@social" with {media:"inst-s", url:"https://www.instagram.com/siljalinesuomi/"} %}</td>
+                <td>{% include "@social" with {media:"twitter", url:"https://twitter.com/tallinksilja"} %}</td>
+                <td>{% include "@social" with {media:"youtube", url:"https://www.youtube.com/user/tallinksiljasuomi"} %}</td>
+            </tr>
+            <tr>
+                <td>{% include "@social" with {media:"fb-t", url:"https://www.facebook.com/tallinksuomi"} %}</td>
+                <td>{% include "@social" with {media:"inst-t", url:"https://www.instagram.com/tallinksuomi/"} %}</td>
+                <td>{% include "@social" with {media:"linkedin", url:"https://www.linkedin.com/company/tallink-silja-ab"} %}</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td align="left" colspan="4" height="20" style="border-collapse:collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-line-height-rule: exactly; line-height: 20px;" valign="top"><!--[if gte mso 15]>&nbsp;<![endif]--></td>
+            </tr>
+            </tbody>
+        </table>
+
+
+    {% endblock %}
+{% endembed %}
