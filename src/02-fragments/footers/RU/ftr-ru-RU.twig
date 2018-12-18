@@ -1,0 +1,45 @@
+{% embed "@co-footer-template"
+    with {appTitle: "Скачайте приложение Tallink и Silja Line",logo: "combined",logoLink: "https://www.tallinksilja.ru"}
+%}
+    {% block left %}
+        <span align="left" style="font-family:Arial, Helvetica, sans-serif; color:{{ theme.textColor }}; font-size:12px; line-height:14px; text-align:left;">{{ "Бронирование и инфо"|upper}}</span><br>
+        <br>
+        {# Cntact #}
+        Центр бронирования в Санкт-Петербурге<br>
+        С понедельника по пятницу<br>
+        с 10:00 до 18:00<br>
+<br>
+        + 7(812) 449 6754<br>
+        {% include "@link" with {text:"info@tallinksilja.ru", href:"mailto:info@tallinksilja.ru"} %}<br>
+<br>
+        Официальный сайт
+        {% include "@link" with {text:"www.tallinksilja.ru", href:"https://www.tallinksilja.ru"} %}<br>
+<br>
+        Это письмо отправлено на адрес: {% include "@dyn-field" with { field:"email" } %}.<br>
+<br>
+        Просим не отвечать на это письмо. При возникновении вопросов Вы можете обратится по электронной почте {% include "@link" with {text:"info@tallinksilja.ru", href:"mailto:info@tallinksilja.ru"} %}<br>
+<br>
+        Если вы не желаете получать рассылку новостей от Tallink,
+        {% include "@link" with {text:"нажмите сюда", href:"https://www.tallinksilja.ru/unsub"} %}<br>
+
+    {% endblock %}
+
+    {% block right %}
+        {# social media #}
+        <span align="left" style="font-family:Arial, Helvetica, sans-serif; color:{{ theme.textColor }}; font-size:12px; line-height:14px; text-align:left;">ПРИСОЕДИНЯЙТЕСЬ В СОЦИАЛЬНЫХ СЕТЯХ:</span><br>
+        <br>
+        <table border="0" cellpadding="0" cellspacing="0" >
+            <tbody>
+            <tr>
+                <td>{% include "@social" with {media:"fb", url:"https://www.facebook.com/Tallink.Silja.Russia"} %}</td>
+                <td>{% include "@social" with {media:"vk", url:"http://vk.com/tallink.silja.russia"} %}</td>
+                <td>{% include "@social" with {media:"inst-s", url:"https://www.instagram.com/silja.line.russia/"} %}</td>
+            </tr>
+
+            <tr>
+                <td align="left" colspan="3" height="20" style="border-collapse:collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-line-height-rule: exactly; line-height: 20px;" valign="top"><!--[if gte mso 15]>&nbsp;<![endif]--></td>
+            </tr>
+            </tbody>
+        </table>
+    {% endblock %}
+{% endembed %}

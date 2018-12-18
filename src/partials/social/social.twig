@@ -12,11 +12,12 @@
     {% if media == "youtube" %}https://www.tallink.ee/documents/10192/66843353/yt.png{% endif %}
     {% if media == "linkedin" %}http://res.messages.tallink.com/res/tallink_mkt_prod6/b4d86438b9c03440e1c8b8d76c207dce85901f1b036ba5be1071830a34c041e5.png{% endif %}
     {% if media == "draugiem" %}http://res.messages.tallink.com/res/tallink_mkt_prod6/fa1ac87e33ad4c7a14cc4a0d27c78d91dcf6406996c5a800f625639e6925674c.png{% endif %}
+    {% if media == "vk" %}http://res.messages.tallink.com/res/tallink_mkt_prod6/da8eef608e7aef2af45d68a978b27f2d948e7a121f465a14830af74e7d21a0a4.png{% endif %}
 {% endset %}
 
 {% set width %}
     {%- if (media == "fb-s") or (media == "fb-t") or (media == "inst-s") or (media == "inst-t")%}60
-    {% elseif media == "youtube" %}40
+    {% elseif media == "youtube"  or (media == "vk") %}40
     {%- else -%}
         30
     {%- endif %}
