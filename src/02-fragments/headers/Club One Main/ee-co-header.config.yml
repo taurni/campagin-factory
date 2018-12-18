@@ -14,28 +14,29 @@ context:
   expThisMonth: Sel kuul aeguvad
   expNxtMonth: Järgmisel kuul aeguvad
   manageAccount: Halda oma kontot ja vaata parimaid pakkumisi just Sulle
+  theme: "@theme--bronze"
 
   versions:
     - label: B Lp0 Bp1 Exp1
       index: 1
       expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.profile.cusTierLevel === 'BRONZE')) && (/*@nlGroup*/(context.profile.cusLevelPoints !== 0) || (context.profile.cusBonusPoints !== 0)) && (/*@nlGroup*/(context.profile.cusCurrentMonthsExpPoints !== 0) || (context.profile.cusNextMonthsExpPoints !== 0))"
-      bgColor: "#004152"
+
       points: true
       pointsExpire: true
     - label: B LpBp1 Exp0
       index: 2
       expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.profile.cusTierLevel === 'BRONZE')) && (/*@nlGroup*/(context.profile.cusLevelPoints !== 0) || (context.profile.cusBonusPoints !== 0)) && (/*@nlGroup*/(context.profile.cusCurrentMonthsExpPoints === 0) && (context.profile.cusNextMonthsExpPoints === 0))"
-      bgColor: "#004152"
+
       points: true
     - label: B All 0
       index: 3
       expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.profile.cusTierLevel === 'BRONZE')) && (context.profile.cusLevelPoints === 0) && (context.profile.cusBonusPoints === 0) && (/*@nlGroup*/(context.profile.cusCurrentMonthsExpPoints === 0) && (context.profile.cusNextMonthsExpPoints === 0))"
-      bgColor: "#004152"
+
 
     - label: S All 1
       index: 4
       expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.profile.cusTierLevel === 'SILVER')) && (/*@nlGroup*/(context.profile.cusLevelPoints !== 0) || (context.profile.cusBonusPoints !== 0)) && (/*@nlGroup*/(context.profile.cusCurrentMonthsExpPoints !== 0) || (context.profile.cusNextMonthsExpPoints !== 0))"
-      bgColor: "#a0aaaf"
+      theme: "@theme--silver"
       levelName: Hõbetase
       points: true
       pointsExpire: true
@@ -43,21 +44,21 @@ context:
     - label: S LpBp1 Exp0
       index: 5
       expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.profile.cusTierLevel === 'SILVER')) && (/*@nlGroup*/(context.profile.cusLevelPoints !== 0) || (context.profile.cusBonusPoints !== 0)) && (/*@nlGroup*/(context.profile.cusCurrentMonthsExpPoints === 0) && (context.profile.cusNextMonthsExpPoints === 0))"
-      bgColor: "#a0aaaf"
+      theme: "@theme--silver"
       levelName: Hõbetase
       points: true
       levelExpire: true
     - label: S All 0
       index: 6
       expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.profile.cusTierLevel === 'SILVER')) && (context.profile.cusLevelPoints === 0) && (context.profile.cusBonusPoints === 0) && (/*@nlGroup*/(context.profile.cusCurrentMonthsExpPoints === 0) && (context.profile.cusNextMonthsExpPoints === 0))"
-      bgColor: "#a0aaaf"
+      theme: "@theme--silver"
       levelName: Hõbetase
       levelExpire: true
 
     - label: G All 1
       index: 7
       expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.profile.cusTierLevel === 'GOLD')) && (/*@nlGroup*/(context.profile.cusLevelPoints !== 0) || (context.profile.cusBonusPoints !== 0)) && (/*@nlGroup*/(context.profile.cusCurrentMonthsExpPoints !== 0) || (context.profile.cusNextMonthsExpPoints !== 0))"
-      bgColor: "#b9a879;"
+      theme: "@theme--gold"
       levelName: Kuldtase
       points: true
       pointsExpire: true
@@ -65,21 +66,21 @@ context:
     - label: G LpBp1 Exp0
       index: 8
       expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.profile.cusTierLevel === 'GOLD')) && (/*@nlGroup*/(context.profile.cusLevelPoints !== 0) || (context.profile.cusBonusPoints !== 0)) && (/*@nlGroup*/(context.profile.cusCurrentMonthsExpPoints === 0) && (context.profile.cusNextMonthsExpPoints === 0))"
-      bgColor: "#b9a879;"
+      theme: "@theme--gold"
       levelName: Kuldtase
       points: true
       levelExpire: true
     - label: G All 0
       index: 9
       expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.profile.cusTierLevel === 'GOLD')) && (context.profile.cusLevelPoints === 0) && (context.profile.cusBonusPoints === 0) && (/*@nlGroup*/(context.profile.cusCurrentMonthsExpPoints === 0) && (context.profile.cusNextMonthsExpPoints === 0))"
-      bgColor: "#b9a879;"
+      theme: "@theme--gold"
       levelName: Kuldtase
       levelExpire: true
 
     - label: Default
       index: 0
       #    expression: ""
-      #    bgColor: "#004152"}
+      #    }
       default: true
       levelExpire: true
       points: true
@@ -90,7 +91,7 @@ variants:
       label: Default
       index: 0
       #    expression: ""
-      #    bgColor: "#004152"}
+      #    }
       default: true
       levelExpire: true
       points: true

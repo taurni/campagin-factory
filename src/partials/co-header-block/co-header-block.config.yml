@@ -4,7 +4,7 @@ context:
   label: Default
   index: 0
   expression: ""
-  bgColor: "#004152"
+
   textColor: "#ffffff"
 
   imageHref: "https://www.tallink.ee/et/club-one/"

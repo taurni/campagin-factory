@@ -1,5 +1,5 @@
-<div class="nl-dce-variant nl-dce-variant-block nl-dce-if nl-dce-multiconditional {% if default %}nl-dce-current-variant{% endif %}" data-component-id="html" data-component-name="richtext.component_html" data-nl-variant-group="{{ groupId }}" data-nl-variant-label="{{label}}" data-nl-variant-index="{{ index }}" data-nl-expr="{{ expression }}" data-nl-condition-type="multiple" {% if default %}data-nl-variant-default="true"{% endif %} {% if bgColor %}style="background-color: {{ bgColor }}"{% endif %}>
-    <!--[if mso]><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td style="background-color: {{ bgColor }};"><![endif]-->
+<div class="nl-dce-variant nl-dce-variant-block nl-dce-if nl-dce-multiconditional {% if default %}nl-dce-current-variant{% endif %}" data-component-id="html" data-component-name="richtext.component_html" data-nl-variant-group="{{ groupId }}" data-nl-variant-label="{{label}}" data-nl-variant-index="{{ index }}" data-nl-expr="{{ expression }}" data-nl-condition-type="multiple" {% if default %}data-nl-variant-default="true"{% endif %} {% if theme.bgColor %}style="background-color: {{ theme.bgColor }}"{% endif %}>
+    <!--[if mso]><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td style="background-color: {{ theme.bgColor }};"><![endif]-->
     <table align="center" cellpadding="0" cellspacing="0" border="0" style="width: 100%;">
         <tbody>
         <tr>
@@ -25,7 +25,15 @@
                                     <td width="10" style="border-collapse: collapse; padding: 0;">
                                     </td>
                                     <td align="left" class="logoco" style="border-collapse: collapse; padding: 0;">
-                                        <a href="{{imageHref}}" name="www_tallink_ee_et_club_one_" xt="SPCLICK" data-id="al153717183947223fab7"> <img alt="Club One" border="0" height="38.767" name="logo_co_mail.png" src="https://www.tallink.ee/documents/10192/66843353/co_both_top_logo_new.png" style="display: block;" title="Club One" width="218"> </a>
+                                        <a href="{{imageHref}}" name="www_tallink_ee_et_club_one_" xt="SPCLICK" data-id="al153717183947223fab7">
+                                            {% if logo == "co-silja" %}
+                                                <img alt="Club One" border="0" name="logo_co_mail.png" src="http://res.messages.tallink.com/res/tallink_mkt_prod6/4496f3540d8f7b91f2bf8dbf6138e4f14982f82c4721517c14fd6ae1ce8dd236.png" style="display: block;" title="Club One" width="218">
+                                            {% elseif logo == "silja" %}
+                                                <img alt="Club One" border="0" name="logo_co_mail.png" src="http://res.messages.tallink.com/res/tallink_mkt_prod6/4fd2d6794f628a2fe4b225dcae3fb8f2c9fcf2a6b1139debc2469bf34d1863fb.png" style="display: block;" title="Club One" width="218">
+                                            {% else %}
+                                                <img alt="Club One" border="0" height="38.767" name="logo_co_mail.png" src="https://www.tallink.ee/documents/10192/66843353/co_both_top_logo_new.png" style="display: block;" title="Club One" width="218">
+                                            {% endif %}
+                                        </a>
                                     </td>
                                 </tr>
                                 </tbody>
@@ -45,7 +53,7 @@
                             <table align="right" border="0" cellpadding="0" cellspacing="0" class="widthtable" width="295">
                                 <tbody>
                                 <tr>
-                                    <td align="right" style="border-collapse: collapse; color: {{ textColor|default("#ffffff")}}; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 18px; padding: 0; vertical-align: top;">
+                                    <td align="right" style="border-collapse: collapse; color: {{ theme.textColor|default("#ffffff")}}; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 18px; padding: 0; vertical-align: top;">
                                         {{levelName}} |
                                         {% set text %}{% include "@dyn-field" with { field: "account-no"} %} {% endset %}
                                         {% include "@static-text" with text %}
@@ -59,9 +67,9 @@
                                 </tr>
                                 {% if points %}
                                 <tr>
-                                    <td align="right" style="border-collapse: collapse; color:{{ textColor|default("#ffffff")}}; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 18px; padding: 0; vertical-align: top;">
+                                    <td align="right" style="border-collapse: collapse; color:{{ theme.textColor|default("#ffffff")}}; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 18px; padding: 0; vertical-align: top;">
                                         {{levelPoints|upper}}:
-                                        {#<a style="color: {{ textColor|default("#ffffff")}}; cursor: text">{% include "@dyn-field" with { field: "level-points"} %}</a>#}
+                                        {#<a style="color: {{ theme.textColor|default("#ffffff")}}; cursor: text">{% include "@dyn-field" with { field: "level-points"} %}</a>#}
                                         {%- set text %}{%- include "@dyn-field" with { field: "level-points"} -%} {%- endset %}
                                         {% include "@static-text" with text %}
                                     </td>
@@ -71,10 +79,10 @@
                                 {% endif %}
                                 {% if levelExpire %}
                                 <tr>
-                                    <td align="right" style="border-collapse: collapse; color:{{ textColor|default("#ffffff")}}; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 18px; padding: 0; vertical-align: top;">
+                                    <td align="right" style="border-collapse: collapse; color:{{ theme.textColor|default("#ffffff")}}; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 18px; padding: 0; vertical-align: top;">
                                         {{ levelEnd }}: {%- set text %}{%- include "@dyn-field" with { field: "co-level-end"} -%} {%- endset %}
                                         {% include "@static-text" with text %}
-                                        {#<a style="color: {{ textColor|default("#ffffff")}}; cursor: text">{% include "@dyn-field" with { field: "co-level-end"} %}</a>#}
+                                        {#<a style="color: {{ theme.textColor|default("#ffffff")}}; cursor: text">{% include "@dyn-field" with { field: "co-level-end"} %}</a>#}
                                     </td>
                                     <td class="hpad" width="20" style="border-collapse: collapse; padding: 0;">
                                     </td>
@@ -86,11 +94,11 @@
                                 </tr>
                                 {% if points %}
                                 <tr>
-                                    <td align="right" style="border-collapse: collapse; color:{{ textColor|default("#ffffff")}}; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 18px; padding: 0; vertical-align: top;">
+                                    <td align="right" style="border-collapse: collapse; color:{{ theme.textColor|default("#ffffff")}}; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 18px; padding: 0; vertical-align: top;">
                                         {{ bonusPoints|upper }}:
                                         {%- set text %}{%- include "@dyn-field" with { field: "bonus-points"} -%} {%- endset %}
                                         {% include "@static-text" with text %}
-                                        {#<a style="color: {{ textColor|default("#ffffff")}}; cursor: text">{% include "@dyn-field" with { field: "bonus-points"} %}</a>#}
+                                        {#<a style="color: {{ theme.textColor|default("#ffffff")}}; cursor: text">{% include "@dyn-field" with { field: "bonus-points"} %}</a>#}
                                     </td>
                                     <td class="hpad" width="20" style="border-collapse: collapse; padding: 0;">
                                     </td>
@@ -98,21 +106,21 @@
                                 {% endif %}
                                 {% if pointsExpire %}
                                 <tr>
-                                    <td align="right" style="border-collapse: collapse; color:{{ textColor|default("#ffffff")}}; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 18px; padding: 0; vertical-align: top;">
+                                    <td align="right" style="border-collapse: collapse; color:{{ theme.textColor|default("#ffffff")}}; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 18px; padding: 0; vertical-align: top;">
                                         {{ expThisMonth }}:
                                         {%- set text %}{%- include "@dyn-field" with { field: "cur-mo-exp"} -%} {%- endset %}
                                         {% include "@static-text" with text %}
-                                        {#<a style="color: {{ textColor|default("#ffffff")}}; cursor: text">{% include "@dyn-field" with { field: "cur-mo-exp"} %}</a>#}
+                                        {#<a style="color: {{ theme.textColor|default("#ffffff")}}; cursor: text">{% include "@dyn-field" with { field: "cur-mo-exp"} %}</a>#}
                                     </td>
                                     <td class="hpad" width="20" style="border-collapse: collapse; padding: 0;">
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td align="right" style="border-collapse: collapse; color: {{ textColor|default("#ffffff")}}; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 15px; padding: 0; vertical-align: top;">
+                                    <td align="right" style="border-collapse: collapse; color: {{ theme.textColor|default("#ffffff")}}; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 15px; padding: 0; vertical-align: top;">
                                         {{expNxtMonth}}:
                                         {%- set text %}{%- include "@dyn-field" with { field: "nxt-mo-exp"} -%} {%- endset %}
                                         {% include "@static-text" with text %}
-                                        {#<a style="color: {{ textColor|default("#ffffff")}}; cursor: text">{% include "@dyn-field" with { field: "nxt-mo-exp"} %}</a>#}
+                                        {#<a style="color: {{ theme.textColor|default("#ffffff")}}; cursor: text">{% include "@dyn-field" with { field: "nxt-mo-exp"} %}</a>#}
                                     </td>
                                     <td class="hpad" width="20" style="border-collapse: collapse; padding: 0;">
                                     </td>
@@ -155,7 +163,7 @@
                                 <tr>
                                     <td width="20" style="border-collapse: collapse; padding: 0;">
                                     </td>
-                                    <td align="left" style="border-collapse: collapse; color: {{ textColor|default("#ffffff")}}; font-family: Arial, Helvetica, sans-serif; font-size: 14px; padding: 0;" valign="middle">
+                                    <td align="left" style="border-collapse: collapse; color: {{ theme.textColor|default("#ffffff")}}; font-family: Arial, Helvetica, sans-serif; font-size: 14px; padding: 0;" valign="middle">
                                         {{ manageAccount }}
                                     </td>
                                     <td width="20" style="border-collapse: collapse; padding: 0;">
@@ -164,8 +172,9 @@
                                         <table border="0" cellpadding="0" cellspacing="0" width="120">
                                             <tbody>
                                             <tr>
-                                                <td height="36" style="background-color: #00ecc9; border-collapse: collapse; color: #004152; font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; padding: 0; text-align: center; text-transform: uppercase;">
-                                                    <a href="{{ buttonHref }}" name="www_tallink_ee_et_club_one_col_1_co" style="text-decoration: none; color: #004152; display: block; font-weight: bold;" target="_blank" xt="SPCLICK" data-id="al153717183947281e8fa">{{buttonText}}</a>
+                                                {#<td height="36" style="background-color: #00ecc9; border-collapse: collapse; color: #004152; font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; padding: 0; text-align: center; text-transform: uppercase;">#}
+                                                <td height="36" style="background-color: {{ theme.buttonBg}}; border-collapse: collapse; color: {{ theme.buttonColor }}; font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; padding: 0; text-align: center; text-transform: uppercase;">
+                                                    <a href="{{ buttonHref }}" name="www_tallink_ee_et_club_one_col_1_co" style="text-decoration: none; color: {{ theme.buttonColor }}; display: block; font-weight: bold;" target="_blank" xt="SPCLICK" data-id="al153717183947281e8fa">{{buttonText}}</a>
                                                 </td>
                                             </tr>
                                             </tbody>

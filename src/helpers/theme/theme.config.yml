@@ -4,7 +4,10 @@ context:
   buoylight: &bl "#cdf8eb"
   poollight: &pl "#c2f7ff"
   sunset: &ss "#ffc8be"
+  action: &actn "#00ecc9"
   white: &ff "#ffffff"
+  silver: &slvr "#a0aaaf"
+  gold: &gld "#b9a879"
 
 variants:
   - name: default
@@ -45,3 +48,24 @@ variants:
       textColor: *mn
       buttonBg: *mn
       buttonColor: *ff
+
+  - name: Bronze
+    context:
+      bgColor: *mn
+      textColor: *ff
+      buttonBg: *actn
+      buttonColor: *mn
+
+  - name: Silver
+    context:
+      bgColor: *slvr
+      textColor: *ff
+      buttonBg: *actn
+      buttonColor: *mn
+
+  - name: Gold
+    context:
+      bgColor: *gld
+      textColor: *ff
+      buttonBg: *actn
+      buttonColor: *mn
