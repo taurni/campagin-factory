@@ -91,3 +91,7 @@ variants:
       points: true
       pointsExpire: true
   - name: dynamic
+  - name: version2
+    context:
+      noLogin: true
+

@@ -134,7 +134,9 @@
                         </td>
                     </tr>
                     <tr>
-                        <td align="left" height="30" style="border-collapse: collapse; line-height: 30px; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0;" valign="top">
+                        {% set h = 38 %}
+                        {% if noLogin != true %}{% set h = 30 %}{% endif %}
+                        <td align="left" height="{{ h }}" style="border-collapse: collapse; line-height: {{ h }}px; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0;" valign="top">
                             <!--[if gte mso 15]>&nbsp;<![endif]-->
                         </td>
                     </tr>
@@ -144,6 +146,7 @@
         </tr>
         </tbody>
     </table>
+    {% if noLogin != true %}
     <table align="center" border="0" cellpadding="0" cellspacing="0" class="widthtable" width="650">
         <tbody>
         <tr>
@@ -204,5 +207,6 @@
         </tr>
         </tbody>
     </table>
+    {% endif %}
     <!--[if mso]></td></tr></table><![endif]-->
 </div>
