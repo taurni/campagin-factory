@@ -1,0 +1,101 @@
+preview: "@preview--header"
+collated: false
+context:
+  groupId: 1539080342912
+  textColor: "#ffffff"
+
+  imageHref: "https://www.tallinksilja.ru"
+  buttonHref: "https://www.tallinksilja.ru/club-one?col=1&colr=/club-one"
+  buttonText: Войти
+  levelName: Бронзовый уровень
+  levelPoints: Бонусные пункты определяющие уровень
+  levelEnd: Уровень действителен до
+  bonusPoints: Бонусные пункты
+  expThisMonth: В этом месяце истекает срок
+  expNxtMonth: В следующем месяце истекает срок
+  manageAccount: Управляйте своей учётной записью и получайте лучшие персональные предложения
+  theme: "@theme--bronze"
+
+
+  versions:
+    - label: B Lp0 Bp1 Exp1
+      index: 1
+      expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.targetData.cusTierLevel === 'BRONZE')) && (/*@nlGroup*/(context.targetData.cusLevelPoints !== 0) || (context.targetData.cusBonusPoints !== 0)) && (/*@nlGroup*/(context.targetData.cusCurrentMonthsExpPoints !== 0) || (context.targetData.cusNextMonthsExpPoints !== 0))"
+
+      points: true
+      pointsExpire: true
+    - label: B LpBp1 Exp0
+      index: 2
+      expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.targetData.cusTierLevel === 'BRONZE')) && (/*@nlGroup*/(context.targetData.cusLevelPoints !== 0) || (context.targetData.cusBonusPoints !== 0)) && (/*@nlGroup*/(context.targetData.cusCurrentMonthsExpPoints === 0) && (context.targetData.cusNextMonthsExpPoints === 0))"
+
+      points: true
+    - label: B All 0
+      index: 3
+      expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.targetData.cusTierLevel === 'BRONZE')) && (context.targetData.cusLevelPoints === 0) && (context.targetData.cusBonusPoints === 0) && (/*@nlGroup*/(context.targetData.cusCurrentMonthsExpPoints === 0) && (context.targetData.cusNextMonthsExpPoints === 0))"
+
+
+    - label: S All 1
+      index: 4
+      expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.targetData.cusTierLevel === 'SILVER')) && (/*@nlGroup*/(context.targetData.cusLevelPoints !== 0) || (context.targetData.cusBonusPoints !== 0)) && (/*@nlGroup*/(context.targetData.cusCurrentMonthsExpPoints !== 0) || (context.targetData.cusNextMonthsExpPoints !== 0))"
+      theme: "@theme--silver"
+      levelName: Серебряный уровень
+      points: true
+      pointsExpire: true
+      levelExpire: true
+    - label: S LpBp1 Exp0
+      index: 5
+      expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.targetData.cusTierLevel === 'SILVER')) && (/*@nlGroup*/(context.targetData.cusLevelPoints !== 0) || (context.targetData.cusBonusPoints !== 0)) && (/*@nlGroup*/(context.targetData.cusCurrentMonthsExpPoints === 0) && (context.targetData.cusNextMonthsExpPoints === 0))"
+      theme: "@theme--silver"
+      levelName: Серебряный уровень
+      points: true
+      levelExpire: true
+    - label: S All 0
+      index: 6
+      expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.targetData.cusTierLevel === 'SILVER')) && (context.targetData.cusLevelPoints === 0) && (context.targetData.cusBonusPoints === 0) && (/*@nlGroup*/(context.targetData.cusCurrentMonthsExpPoints === 0) && (context.targetData.cusNextMonthsExpPoints === 0))"
+      theme: "@theme--silver"
+      levelName: Серебряный уровень
+      levelExpire: true
+
+    - label: G All 1
+      index: 7
+      expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.targetData.cusTierLevel === 'GOLD')) && (/*@nlGroup*/(context.targetData.cusLevelPoints !== 0) || (context.targetData.cusBonusPoints !== 0)) && (/*@nlGroup*/(context.targetData.cusCurrentMonthsExpPoints !== 0) || (context.targetData.cusNextMonthsExpPoints !== 0))"
+      theme: "@theme--gold"
+      levelName: Золотой уровень
+      points: true
+      pointsExpire: true
+      levelExpire: true
+    - label: G LpBp1 Exp0
+      index: 8
+      expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.targetData.cusTierLevel === 'GOLD')) && (/*@nlGroup*/(context.targetData.cusLevelPoints !== 0) || (context.targetData.cusBonusPoints !== 0)) && (/*@nlGroup*/(context.targetData.cusCurrentMonthsExpPoints === 0) && (context.targetData.cusNextMonthsExpPoints === 0))"
+      theme: "@theme--gold"
+      levelName: Золотой уровень
+      points: true
+      levelExpire: true
+    - label: G All 0
+      index: 9
+      expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.targetData.cusTierLevel === 'GOLD')) && (context.targetData.cusLevelPoints === 0) && (context.targetData.cusBonusPoints === 0) && (/*@nlGroup*/(context.targetData.cusCurrentMonthsExpPoints === 0) && (context.targetData.cusNextMonthsExpPoints === 0))"
+      theme: "@theme--gold"
+      levelName: Золотой уровень
+      levelExpire: true
+
+    - label: Default
+      index: 0
+      #    expression: ""
+      #    }
+      default: true
+      levelExpire: true
+      points: true
+      pointsExpire: true
+
+variants:
+  - name: default
+    context:
+      label: Default
+      index: 0
+      #    expression: ""
+      #    }
+      default: true
+      levelExpire: true
+      points: true
+      pointsExpire: true
+  - name: dynamic
