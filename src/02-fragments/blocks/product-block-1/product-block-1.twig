@@ -1,0 +1,134 @@
+<div class="fragment component" data-component-id="html" data-component-name="richtext.component_html">
+    <table align="center" bgcolor="{{ theme.bgColor }}" border="0" cellpadding="0" cellspacing="0" class="widthtable" style="min-width:650px;"
+           width="650">
+        <tbody>
+        <tr>
+            <td align="center">
+                <table border="0" cellpadding="0" cellspacing="0" class="innertable" width="550">
+                    <tbody>
+                    <tr>
+                        <td align="left" height="38"
+                            style="border-collapse:collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-line-height-rule: exactly; line-height: 38px;"
+                            valign="top">
+                            <!--[if gte mso 15]>&nbsp;<![endif]-->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="innertable" van="top" width="550">
+                            <!--[if gte mso 9]>
+                            <table cellpadding="0" cellspacing="0" border="0" width="550">
+                                <tr>
+                                    <td valign="top"><![endif]-->
+                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="innertable"
+                                   width="266">
+                                <tbody>
+                                <tr>
+                                    <td class="colspan1" data-name="Drag a new component here.">
+                                        {% include "@image" with {
+                                            imageSrc: "https://www.tallink.ee/documents/10192/66843353/344x200_3.png",
+                                            imageWidth: "266"
+                                        } %}
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <!--[if gte mso 9]></td>
+                            <td valign="top"><![endif]-->
+                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="innertable" width="2">
+                                <tbody>
+                                <tr>
+                                    <td class="widthMainText" height="20" width="2">
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <!--[if gte mso 9]></td>
+                            <td valign="top"><![endif]-->
+                            <table align="right" border="0" cellpadding="0" cellspacing="0" class="innertable"
+                                   width="266">
+                                <tbody>
+                                <tr>
+                                    <td align="left"
+                                        style="font-family:Arial, Helvetica, sans-serif; color:{{ theme.textColor }}; font-size:18px; line-height:20px; text-align:left; font-weight: bold;"
+                                        valign="top">
+
+                                        <a href="https://wwww.tallink.com" name="three_col_img_three"
+                                           style="font-family:Arial, Helvetica, sans-serif; color:{{ theme.textColor }}; font-size:16px; line-height:18px; text-align:left; font-weight: bold; text-decoration: none;"
+                                           target="_blank" xt="SPCLICK"
+                                           class="colspan1">
+                                            {% include "@text" with {textContent:"LOREM IPSUM DOLOR"}%}
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left" height="10"
+                                        style="border-collapse:collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-line-height-rule: exactly; line-height: 10px;"
+                                        valign="top">
+                                        <!--[if gte mso 15]>&nbsp;<![endif]-->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="colspan1" align="left"
+                                        style="font-family:Arial, Helvetica, sans-serif; color:{{ theme.textColor }}; font-size:14px; line-height:18px; text-align:left;"
+                                        valign="top">
+                                        {% embed "@text" %}
+                                            {% block textContent %}
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque dolorum
+                                                fugit nihil nostrum. Eligendi enim fuga harum iure officiis omnis,
+                                                repellendus sequi sunt! Ab ea maxime praesentium quasi quia repellendus.
+                                                Lorem ipsum dolor sit amet, consectetur.
+                                            {% endblock %}
+                                        {% endembed %}
+
+                                    </td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+                            <!--[if gte mso 9]></td></tr></table><![endif]-->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" height="27"
+                            style="border-collapse:collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-line-height-rule: exactly; line-height: 27px;"
+                            valign="top">
+                            <!--[if gte mso 15]>&nbsp;<![endif]-->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="colspan1" align="center"
+                            style="text-align: center; font-family:Arial, Helvetica, sans-serif; color:{{ theme.textColor }}; font-size:18px; line-height:22px; font-weight: bold">
+
+                            {% embed "@text" %}
+                                {% block textContent %}
+                                    Price: <span style="color:{{ theme.action }};">Lorem 37 000 ipsum</span>
+                                {% endblock %}
+                            {% endembed %}
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="colspan1" align="center"
+                            style="text-align: center; font-family:Arial, Helvetica, sans-serif; color:{{ theme.textColor }}; font-size:14px; line-height:18px;">
+                            {% include "@text" with {textContent:"Some text"}%}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="colspan1" align="center" style="text-align: center">
+                            {% include "@button" with {buttonText: "LOREM IPSUM 2", buttonMargin: 27, buttonAlign:"center" }%}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" height="38"
+                            style="border-collapse:collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-line-height-rule: exactly; line-height: 38px;"
+                            valign="top">
+                            <!--[if gte mso 15]>&nbsp;<![endif]-->
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

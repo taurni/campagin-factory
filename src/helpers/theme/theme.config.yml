@@ -17,22 +17,24 @@ variants:
     context:
       bgColor: *sf
       textColor: *mn
-#      buttonBg:
+#      buttonBg: *actn
 #      buttonColor:
+      action: *actn
 
   - name: Midnight
     context:
       bgColor: *mn
       textColor: *ff
-#      buttonBg:
+#      buttonBg: *actn
 #      buttonColor:
 
   - name: Buoylight
     context:
       bgColor: *bl
       textColor: *mn
-#      buttonBg:
+#      buttonBg: *actn
 #      buttonColor:
+      action: *actn
 
   - name: Poollight
     label: Pool light
@@ -41,6 +43,7 @@ variants:
       textColor: *mn
       buttonBg: *mn
       buttonColor: *ff
+      action: *actn
 
   - name: Sunset
     context:
@@ -48,6 +51,7 @@ variants:
       textColor: *mn
       buttonBg: *mn
       buttonColor: *ff
+      action: *actn
 
   - name: Bronze
     context:
