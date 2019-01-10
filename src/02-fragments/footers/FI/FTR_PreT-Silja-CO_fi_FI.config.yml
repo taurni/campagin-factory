@@ -1,0 +1,13 @@
+
+collated: false
+context:
+  groupId: 1539080342934
+  clubone: true
+  versions:
+    - label: Gold
+      index: 1
+      expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.targetData.cusTierLevel === 'GOLD'))"
+      content: Club One Gold -asiakkaat<br>010 80 4132<br>(8,35 snt/puh + 16,69 snt/min)<br>
+    - label: Default
+      index: 0
+      default: true
