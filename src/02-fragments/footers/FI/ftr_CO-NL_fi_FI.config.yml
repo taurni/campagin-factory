@@ -1,0 +1,17 @@
+collated: false
+context:
+  groupId: 1539080342934
+  clubone: true
+  versions:
+    - label: Gold
+      index: 1
+      expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.targetData.cusTierLevel === 'GOLD'))"
+      content: Club One -asiakkaat<br>0600 152 68<br>(1,75 €/vastattu puhelu + aina pvm/mpm)<br>
+    - label: Default
+      index: 0
+      default: true
+
+variants:
+  - name: default
+    label: CO-NL-dynamic
+    notes: Dynamic fragment GOLD/DEFAULT

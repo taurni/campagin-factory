@@ -1,0 +1,54 @@
+{% embed "@co-footer-template" with { appTitle: "Lataa mobiilisovelluksemme", logo: "combined", logoLink: "https://www.tallinksilja.fi"} %}
+    {% block left %}
+        <span align="left" style="font-family:Arial, Helvetica, sans-serif; color:{{ theme.textColor }}; font-size:12px; line-height:14px; text-align:left;">{{ "Yhteystiedot"|upper }}</span><br>
+        <br>
+        {%- for version in versions %}
+            <div class="nl-dce-variant nl-dce-variant-block nl-dce-if nl-dce-multiconditional {% if version.default %}nl-dce-current-variant{% endif %}" data-component-id="html" data-component-name="richtext.component_html" data-nl-variant-group="{{ version.groupId }}" data-nl-variant-label="{{version.label}}" data-nl-variant-index="{{ version.index }}" data-nl-expr="{{ version.expression }}" data-nl-condition-type="multiple" {% if version.default %}data-nl-variant-default="true"{% endif %}>
+                {% if version.content %}
+                    {{ version.content }}
+                {% else %}
+                    Club One -asiakkaat<br>
+                    0600 152 68<br>
+                    (1,75 €/vastattu puhelu + aina pvm/mpm)<br>
+                {% endif %}
+            </div>
+        {%- endfor %}
+        Palvelemme ma-pe 8-19 ja la-su 9-17<br>
+        <br>
+        Ethän vastaa tähän viestiin, sillä viesti ei palaudu lähettäjälle.<br>
+        <br>
+        Jos et jatkossa halua tätä uutiskirjettä, voit poistaa itsesi Club One -uutiskirjeen tilaajalistalta kirjauduttuasi {% include "@link" with {text:"Club One -verkkopalveluun.", href:"https://urldefense.proofpoint.com/v2/url?u=http-3A__links.mkt1434.com_ctt-3Fkn-3D2-26ms-3DNTgwMjYzMDIS1-26r-3DMzQ3MjA4MzYwODU2S0-26b-3D0-26j-3DMTU0MTgyMjc2MgS2-26mt-3D1-26rt-3D3&d=DwMFaQ&c=VasWFa-FUnbrdTI09mWIwIv701nNYRjjjAKdtG85aEk&r=RUn7-XwZClDw6hilfgZwXT0zduglahAw4eOtsEAd4mD_iEKI_wlW7Y9z03ejorpR&m=bwX0hkrSRzv82mQJss99ZjLzFa5D5JMXB1ZgCZusIv0&s=bYM94k-r4S6qlmUKuDoFcIckiYfTjWRGwxvbi0FGWG0&e="} %}<br>
+        Poista rasti kohdasta 'Haluan Club One -etuja ja uutisia sähköpostitse'.<br>
+        <br>
+        Osoiterekisteri: Club One -uutiskirje<br>
+        Viesti lähetetty osoitteeseen: {% include "@dyn-field" with { field: "email"} %}<br>
+        <br>
+        Henkilökohtainen Club One -korttinumerosi: {% include "@dyn-field" with { field: "card-no"} %}
+    {% endblock %}
+
+    {% block right %}
+        <span align="left" style="font-family:Arial, Helvetica, sans-serif; color:#F5F8F7; font-size:12px; line-height:14px; text-align:left;">SEURAA MEITÄ</span><br>
+
+        <table border="0" cellpadding="0" cellspacing="0" width="184">
+            <tbody>
+            <tr>
+                <td>{% include "@social" with {media:"fb-s", url:"https://www.facebook.com/siljalinesuomi"} %}</td>
+                <td>{% include "@social" with {media:"inst-s", url:"https://www.instagram.com/siljalinesuomi/"} %}</td>
+                <td>{% include "@social" with {media:"twitter", url:"https://twitter.com/tallinksilja"} %}</td>
+                <td>{% include "@social" with {media:"youtube", url:"https://www.youtube.com/user/tallinksiljasuomi"} %}</td>
+            </tr>
+            <tr>
+                <td>{% include "@social" with {media:"fb-t", url:"https://www.facebook.com/tallinksuomi"} %}</td>
+                <td>{% include "@social" with {media:"inst-t", url:"https://www.instagram.com/tallinksuomi/"} %}</td>
+                <td>{% include "@social" with {media:"linkedin", url:"https://www.linkedin.com/company/tallink-silja-ab"} %}</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td align="left" colspan="4" height="20" style="border-collapse:collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-line-height-rule: exactly; line-height: 20px;" valign="top"><!--[if gte mso 15]>&nbsp;<![endif]--></td>
+            </tr>
+            </tbody>
+        </table>
+
+
+    {% endblock %}
+{% endembed %}
