@@ -1,0 +1,40 @@
+{% embed "@co-footer-template" with { appTitle: "Lataa mobiilisovelluksemme", logo: "combined", logoLink: "https://www.tallinksilja.fi"} %}
+    {% block left %}
+        <span align="left" style="font-family:Arial, Helvetica, sans-serif; color:{{ theme.textColor }}; font-size:12px; line-height:14px; text-align:left;">{{ "Yhteystiedot"|upper }}</span><br>
+        <br>
+        Yksittäisasiakkaat<br>
+        <br>
+        0600 157 00<br>
+        (1,75 €/vastattu puhelu + aina pvm/mpm)<br>
+        <br>
+        Olet tilannut tämän tarjouskirjeen varatessasi Tallink Siljan matkan tai erikseen rekisteröitymällä tilaajaksi sivuillamme. Jos et enää jatkossa halua vastaanottaa kirjeitämme, voit poistua tarjouskirjelistaltamme {% include "@link" with {text:"tästä", href:"https://www.tallinksilja.fi/uutiskirje-tilauksen-peruutus/?unsub=&utm_source=_&utm_medium=E-MAIL&utm_campaign=Test%20-%20news_regular_fi_v17_fi"} %}. Kirjoita kenttään sähköpostiosoite, johon vastaanotit tämän viestin. Ethän vastaa tähän viestiin, sillä vastaus ei palaudu lähettäjälle.<br>
+        <br>
+        Osoiterekisteri: Tallink Silja -uutiskirje<br>
+    {% endblock %}
+
+    {% block right %}
+        <span align="left" style="font-family:Arial, Helvetica, sans-serif; color:#F5F8F7; font-size:12px; line-height:14px; text-align:left;">SEURAA MEITÄ</span><br>
+
+        <table border="0" cellpadding="0" cellspacing="0" width="184">
+            <tbody>
+            <tr>
+                <td>{% include "@social" with {media:"fb-s", url:"https://www.facebook.com/siljalinesuomi"} %}</td>
+                <td>{% include "@social" with {media:"inst-s", url:"https://www.instagram.com/siljalinesuomi/"} %}</td>
+                <td>{% include "@social" with {media:"twitter", url:"https://twitter.com/tallinksilja"} %}</td>
+                <td>{% include "@social" with {media:"youtube", url:"https://www.youtube.com/user/tallinksiljasuomi"} %}</td>
+            </tr>
+            <tr>
+                <td>{% include "@social" with {media:"fb-t", url:"https://www.facebook.com/tallinksuomi"} %}</td>
+                <td>{% include "@social" with {media:"inst-t", url:"https://www.instagram.com/tallinksuomi/"} %}</td>
+                <td>{% include "@social" with {media:"linkedin", url:"https://www.linkedin.com/company/tallink-silja-ab"} %}</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td align="left" colspan="4" height="20" style="border-collapse:collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-line-height-rule: exactly; line-height: 20px;" valign="top"><!--[if gte mso 15]>&nbsp;<![endif]--></td>
+            </tr>
+            </tbody>
+        </table>
+
+
+    {% endblock %}
+{% endembed %}

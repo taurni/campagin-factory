@@ -6,12 +6,12 @@ variants:
     label: CO-dynamic
     notes: Dynamic fragment GOLD/DEFAULT
     context:
-      groupId: 1539080342923
+      groupId: 1539080342111
       clubone: true
       versions:
         - label: Gold
           index: 1
-          expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.targetData.cusTierLevel === 'GOLD'))"
+          expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.profile.cusTierLevel === 'GOLD'))"
           phone: +46 (0)20 55 55 50
         - label: Default
           index: 0
