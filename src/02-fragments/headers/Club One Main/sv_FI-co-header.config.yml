@@ -1,20 +1,21 @@
 preview: "@preview--header"
 collated: false
 context:
-  groupId: 1539080342912
+  groupId: 1539080342110
   textColor: "#ffffff"
 
-  imageHref: "https://www.tallink.ee/et/club-one/"
-  buttonHref: "https://www.tallink.ee/et/club-one?col=1&amp;colr=/et/club-one"
-  buttonText: logi&nbsp;sisse
-  levelName: Pronkstase
-  levelPoints: Tasemepunktid
-  levelEnd: Taseme lõpp
-  bonusPoints: Boonuspunktid
-  expThisMonth: Sel kuul aeguvad
-  expNxtMonth: Järgmisel kuul aeguvad
-  manageAccount: Halda oma kontot ja vaata parimaid pakkumisi just Sulle
+  imageHref: "https://www.tallinksilja.fi/club-one"
+  buttonHref: "https://www.tallinksilja.fi/fi/etsi-matka?col=1&colr=/fi/club-one?col=1&colr=/fi/web/fi/club-one"
+  buttonText: Logga in
+  levelName: Bronze-nivå
+  levelPoints: Nivåpoäng
+  levelEnd: Nivåns utgångsdatum
+  bonusPoints: Bonuspoäng
+  expThisMonth: Förfaller denna månad
+  expNxtMonth: Förfaller nästa månad
+  manageAccount: Mitt konto, bokningar och förmåner i Club One -webbtjänsten
   theme: "@theme--bronze"
+
 
   versions:
     - label: B Lp0 Bp1 Exp1
@@ -37,7 +38,7 @@ context:
       index: 4
       expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.profile.cusTierLevel === 'SILVER')) && (/*@nlGroup*/(context.profile.cusLevelPoints !== 0) || (context.profile.cusBonusPoints !== 0)) && (/*@nlGroup*/(context.profile.cusCurrentMonthsExpPoints !== 0) || (context.profile.cusNextMonthsExpPoints !== 0))"
       theme: "@theme--silver"
-      levelName: Hõbetase
+      levelName: Silver-nivå
       points: true
       pointsExpire: true
       levelExpire: true
@@ -45,21 +46,21 @@ context:
       index: 5
       expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.profile.cusTierLevel === 'SILVER')) && (/*@nlGroup*/(context.profile.cusLevelPoints !== 0) || (context.profile.cusBonusPoints !== 0)) && (/*@nlGroup*/(context.profile.cusCurrentMonthsExpPoints === 0) && (context.profile.cusNextMonthsExpPoints === 0))"
       theme: "@theme--silver"
-      levelName: Hõbetase
+      levelName: Silver-nivå
       points: true
       levelExpire: true
     - label: S All 0
       index: 6
       expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.profile.cusTierLevel === 'SILVER')) && (context.profile.cusLevelPoints === 0) && (context.profile.cusBonusPoints === 0) && (/*@nlGroup*/(context.profile.cusCurrentMonthsExpPoints === 0) && (context.profile.cusNextMonthsExpPoints === 0))"
       theme: "@theme--silver"
-      levelName: Hõbetase
+      levelName: Silver-nivå
       levelExpire: true
 
     - label: G All 1
       index: 7
       expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.profile.cusTierLevel === 'GOLD')) && (/*@nlGroup*/(context.profile.cusLevelPoints !== 0) || (context.profile.cusBonusPoints !== 0)) && (/*@nlGroup*/(context.profile.cusCurrentMonthsExpPoints !== 0) || (context.profile.cusNextMonthsExpPoints !== 0))"
       theme: "@theme--gold"
-      levelName: Kuldtase
+      levelName: Gold-nivå
       points: true
       pointsExpire: true
       levelExpire: true
@@ -67,14 +68,14 @@ context:
       index: 8
       expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.profile.cusTierLevel === 'GOLD')) && (/*@nlGroup*/(context.profile.cusLevelPoints !== 0) || (context.profile.cusBonusPoints !== 0)) && (/*@nlGroup*/(context.profile.cusCurrentMonthsExpPoints === 0) && (context.profile.cusNextMonthsExpPoints === 0))"
       theme: "@theme--gold"
-      levelName: Kuldtase
+      levelName: Gold-nivå
       points: true
       levelExpire: true
     - label: G All 0
       index: 9
       expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.profile.cusTierLevel === 'GOLD')) && (context.profile.cusLevelPoints === 0) && (context.profile.cusBonusPoints === 0) && (/*@nlGroup*/(context.profile.cusCurrentMonthsExpPoints === 0) && (context.profile.cusNextMonthsExpPoints === 0))"
       theme: "@theme--gold"
-      levelName: Kuldtase
+      levelName: Gold-nivå
       levelExpire: true
 
     - label: Default
@@ -85,6 +86,7 @@ context:
       levelExpire: true
       points: true
       pointsExpire: true
+
 variants:
   - name: default
     context:

@@ -1,73 +1,81 @@
 preview: "@preview--header"
 collated: false
 context:
-  groupId: 1539080343002
+  groupId: 1539080342107
   textColor: "#ffffff"
 
-  imageHref: "https://www.tallinksilja.fi/club-one"
-  buttonHref: "https://www.tallinksilja.fi/fi/etsi-matka?col=1&colr=/fi/club-one?col=1&colr=/fi/web/fi/club-one"
-  buttonText: Logga in
-  levelName: Bronze-nivå
-  levelPoints: Nivåpoäng
-  levelEnd: Nivåns utgångsdatum
-  bonusPoints: Bonuspoäng
-  expThisMonth: Förfaller denna månad
-  expNxtMonth: Förfaller nästa månad
-  manageAccount: Mitt konto, bokningar och förmåner i Club One -webbtjänsten
-  theme: "@theme--sunset"
-  logo: co-silja
+  imageHref: "https://www.tallink.ee/ru/club-one"
+  buttonHref: "https://www.tallink.ee/ru/club-one?col=1&colr=/ru/club-one"
+  buttonText: Войти
+  levelName: Бронзовый уровень
+  levelPoints: Зачётные пункты
+  levelEnd: Уровень в силе до
+  bonusPoints: Бонусные пункты
+  expThisMonth: В этом месяце истекает срок
+  expNxtMonth: В следующем месяце истекает срок
+  manageAccount: Управляйте своей учётной записью и получайте лучшие персональные предложения
+  theme: "@theme--bronze"
 
 
   versions:
     - label: B Lp0 Bp1 Exp1
       index: 1
       expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.profile.cusTierLevel === 'BRONZE')) && (/*@nlGroup*/(context.profile.cusLevelPoints !== 0) || (context.profile.cusBonusPoints !== 0)) && (/*@nlGroup*/(context.profile.cusCurrentMonthsExpPoints !== 0) || (context.profile.cusNextMonthsExpPoints !== 0))"
+
       points: true
       pointsExpire: true
     - label: B LpBp1 Exp0
       index: 2
       expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.profile.cusTierLevel === 'BRONZE')) && (/*@nlGroup*/(context.profile.cusLevelPoints !== 0) || (context.profile.cusBonusPoints !== 0)) && (/*@nlGroup*/(context.profile.cusCurrentMonthsExpPoints === 0) && (context.profile.cusNextMonthsExpPoints === 0))"
+
       points: true
     - label: B All 0
       index: 3
       expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.profile.cusTierLevel === 'BRONZE')) && (context.profile.cusLevelPoints === 0) && (context.profile.cusBonusPoints === 0) && (/*@nlGroup*/(context.profile.cusCurrentMonthsExpPoints === 0) && (context.profile.cusNextMonthsExpPoints === 0))"
 
+
     - label: S All 1
       index: 4
       expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.profile.cusTierLevel === 'SILVER')) && (/*@nlGroup*/(context.profile.cusLevelPoints !== 0) || (context.profile.cusBonusPoints !== 0)) && (/*@nlGroup*/(context.profile.cusCurrentMonthsExpPoints !== 0) || (context.profile.cusNextMonthsExpPoints !== 0))"
-      levelName: Silver-nivå
+      theme: "@theme--silver"
+      levelName: Серебряный уровень
       points: true
       pointsExpire: true
       levelExpire: true
     - label: S LpBp1 Exp0
       index: 5
       expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.profile.cusTierLevel === 'SILVER')) && (/*@nlGroup*/(context.profile.cusLevelPoints !== 0) || (context.profile.cusBonusPoints !== 0)) && (/*@nlGroup*/(context.profile.cusCurrentMonthsExpPoints === 0) && (context.profile.cusNextMonthsExpPoints === 0))"
-      levelName: Silver-nivå
+      theme: "@theme--silver"
+      levelName: Серебряный уровень
       points: true
       levelExpire: true
     - label: S All 0
       index: 6
       expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.profile.cusTierLevel === 'SILVER')) && (context.profile.cusLevelPoints === 0) && (context.profile.cusBonusPoints === 0) && (/*@nlGroup*/(context.profile.cusCurrentMonthsExpPoints === 0) && (context.profile.cusNextMonthsExpPoints === 0))"
-      levelName: Silver-nivå
+      theme: "@theme--silver"
+      levelName: Серебряный уровень
       levelExpire: true
 
     - label: G All 1
       index: 7
       expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.profile.cusTierLevel === 'GOLD')) && (/*@nlGroup*/(context.profile.cusLevelPoints !== 0) || (context.profile.cusBonusPoints !== 0)) && (/*@nlGroup*/(context.profile.cusCurrentMonthsExpPoints !== 0) || (context.profile.cusNextMonthsExpPoints !== 0))"
-      levelName: Gold-nivå
+      theme: "@theme--gold"
+      levelName: Золотой уровень
       points: true
       pointsExpire: true
       levelExpire: true
     - label: G LpBp1 Exp0
       index: 8
       expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.profile.cusTierLevel === 'GOLD')) && (/*@nlGroup*/(context.profile.cusLevelPoints !== 0) || (context.profile.cusBonusPoints !== 0)) && (/*@nlGroup*/(context.profile.cusCurrentMonthsExpPoints === 0) && (context.profile.cusNextMonthsExpPoints === 0))"
-      levelName: Gold-nivå
+      theme: "@theme--gold"
+      levelName: Золотой уровень
       points: true
       levelExpire: true
     - label: G All 0
       index: 9
       expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.profile.cusTierLevel === 'GOLD')) && (context.profile.cusLevelPoints === 0) && (context.profile.cusBonusPoints === 0) && (/*@nlGroup*/(context.profile.cusCurrentMonthsExpPoints === 0) && (context.profile.cusNextMonthsExpPoints === 0))"
-      levelName: Gold-nivå
+      theme: "@theme--gold"
+      levelName: Золотой уровень
       levelExpire: true
 
     - label: Default
@@ -91,7 +99,3 @@ variants:
       points: true
       pointsExpire: true
   - name: dynamic
-  - name: version2
-    context:
-      noLogin: true
-
