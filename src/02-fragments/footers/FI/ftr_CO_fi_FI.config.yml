@@ -8,7 +8,7 @@ context:
       expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.profile.cusTierLevel === 'GOLD'))"
       content: Club One Gold-asiakkaat<br>010 80 4132<br>(8,35 snt/puh + 16,69 snt/min)<br>
     - label: Default
-      index: 0
+      index: "0"
       default: true
 
 variants:

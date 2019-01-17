@@ -1,4 +1,12 @@
-{% embed "@co-footer-template" with { appTitle: "Ladda mobilapplikationen", logo: "combined", logoLink: "https://www.tallinksilja.se/hitta-resa"} %}
+{% if market == "silja" %}
+    {% set logo = "silja" %}
+{% elseif market == "tallink" %}
+    {% set logo = "tallink" %}
+{% else %}
+    {% set logo = "combined" %}
+{% endif %}
+
+{% embed "@co-footer-template" with { appTitle: "Ladda mobilapplikationen", logo: logo, logoLink: "https://www.tallinksilja.se/hitta-resa"} %}
     {% block left %}
         <span align="left" style="font-family:Arial, Helvetica, sans-serif; color:{{ theme.textColor }}; font-size:12px; line-height:14px; text-align:left;">{{"KONTAKTA OSS:"|upper}}</span><br>
         <br>
@@ -7,7 +15,7 @@
         {% if clubone %}
             {% include "@link" with {text:"Kontaktformulär", href:"https://www.tallinksilja.se/club-one-kontakta-oss-mail"} %}<br>
             {%- for version in versions %}
-                <div class="nl-dce-variant nl-dce-variant-block nl-dce-if nl-dce-multiconditional {% if version.default %}nl-dce-current-variant{% endif %}" data-component-id="html" data-component-name="richtext.component_html" data-nl-variant-group="{{ version.groupId }}" data-nl-variant-label="{{version.label}}" data-nl-variant-index="{{ version.index }}" data-nl-expr="{{ version.expression }}" data-nl-condition-type="multiple" {% if version.default %}data-nl-variant-default="true"{% endif %}>
+                <div class="nl-dce-variant nl-dce-variant-block nl-dce-if nl-dce-multiconditional {% if version.default %}nl-dce-current-variant{% endif %}" data-component-id="html" data-component-name="richtext.component_html" data-nl-variant-group="{{ groupId }}" data-nl-variant-label="{{version.label}}" data-nl-variant-index="{{ version.index }}" data-nl-expr="{{ version.expression }}" data-nl-condition-type="multiple" {% if version.default %}data-nl-variant-default="true"{% endif %}>
                     Information och bokning: {{ version.phone| default("+46 8 22 21 40") }}<br>
                 </div>
             {%- endfor %}
@@ -37,20 +45,53 @@
     {% block right %}
         <span align="left" style="font-family:Arial, Helvetica, sans-serif; color:#F5F8F7; font-size:12px; line-height:14px; text-align:left;">FÖLJ OSS:</span><br>
 
-        <table border="0" cellpadding="0" cellspacing="0" width="184">
-            <tbody>
-            <tr>
-                <td>{% include "@social" with {media:"fb-s", url:"https://www.facebook.com/siljalinesverige"} %}</td>
-                <td>{% include "@social" with {media:"inst-s", url:"https://www.instagram.com/siljalinesverige/"} %}</td>
-                <td>{% include "@social" with {media:"twitter", url:"https://twitter.com/tallinksiljase"} %}</td>
-                <td>{% include "@social" with {media:"youtube", url:"https://www.youtube.com/user/tallinksiljasweden"} %}</td>
-            </tr>
-            <tr>
-                <td>{% include "@social" with {media:"fb-t", url:"https://www.facebook.com/tallinksverige"} %}</td>
-                <td>{% include "@social" with {media:"inst-t", url:"https://www.instagram.com/tallinksverige/"} %}</td>
-                <td>{% include "@social" with {media:"linkedin", url:"https://www.linkedin.com/company/tallink-silja-ab"} %}</td>
-                <td>&nbsp;</td>
-            </tr>
+            {% if market == "silja" %}
+            <table border="0" cellpadding="0" cellspacing="0" width="140">
+                <tbody>
+                <tr>
+                    <td >{% include "@social" with {media:"fb-s", url:"https://www.facebook.com/siljalinesverige"} %}</td>
+                    <td>{% include "@social" with {media:"twitter", url:"https://twitter.com/tallinksiljase"} %}</td>
+                    <td>{% include "@social" with {media:"youtube", url:"https://www.youtube.com/user/tallinksiljasweden"} %}</td>
+                </tr>
+                <tr>
+                    <td>{% include "@social" with {media:"inst-s", url:"https://www.instagram.com/siljalinesverige/"} %}</td>
+                    <td>{% include "@social" with {media:"linkedin", url:"https://www.linkedin.com/company/tallink-silja-ab"} %}</td>
+                    <td>&nbsp;</td>
+
+                </tr>
+            {% elseif market == "tallink" %}
+            <table border="0" cellpadding="0" cellspacing="0" width="140">
+                <tbody>
+                <tr>
+                    <td>{% include "@social" with {media:"fb-t", url:"https://www.facebook.com/tallinksverige"} %}</td>
+                    <td>{% include "@social" with {media:"twitter", url:"https://twitter.com/tallinksiljase"} %}</td>
+                    <td>{% include "@social" with {media:"youtube", url:"https://www.youtube.com/user/tallinksiljasweden"} %}</td>
+                </tr>
+                <tr>
+                    <td>{% include "@social" with {media:"inst-t", url:"https://www.instagram.com/tallinksverige/"} %}</td>
+                    <td>{% include "@social" with {media:"linkedin", url:"https://www.linkedin.com/company/tallink-silja-ab"} %}</td>
+                    <td>&nbsp;</td>
+                </tr>
+
+
+            {% else %}
+                <table border="0" cellpadding="0" cellspacing="0" width="184">
+                    <tbody>
+                    <tr>
+                        <td>{% include "@social" with {media:"fb-s", url:"https://www.facebook.com/siljalinesverige"} %}</td>
+                        <td>{% include "@social" with {media:"inst-s", url:"https://www.instagram.com/siljalinesverige/"} %}</td>
+                        <td>{% include "@social" with {media:"twitter", url:"https://twitter.com/tallinksiljase"} %}</td>
+                        <td>{% include "@social" with {media:"youtube", url:"https://www.youtube.com/user/tallinksiljasweden"} %}</td>
+                    </tr>
+                    <tr>
+                        <td>{% include "@social" with {media:"fb-t", url:"https://www.facebook.com/tallinksverige"} %}</td>
+                        <td>{% include "@social" with {media:"inst-t", url:"https://www.instagram.com/tallinksverige/"} %}</td>
+                        <td>{% include "@social" with {media:"linkedin", url:"https://www.linkedin.com/company/tallink-silja-ab"} %}</td>
+                        <td>&nbsp;</td>
+                    </tr>
+
+            {% endif %}
+
             <tr>
                 <td align="left" colspan="4" height="20" style="border-collapse:collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-line-height-rule: exactly; line-height: 20px;" valign="top"><!--[if gte mso 15]>&nbsp;<![endif]--></td>
             </tr>
