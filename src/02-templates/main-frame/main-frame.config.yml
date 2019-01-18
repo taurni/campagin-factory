@@ -1,4 +1,52 @@
 preview: "@preview--container"
-titie: test
+collated: false
 context:
-  foo: bar
+  webVersion: Vaata kirja veebis
+
+variants:
+  - name: default
+    context:
+      default: true
+
+  - name: ee_EE
+    context:
+      webVersion: Vaata kirja veebis
+
+  - name: ru_EE
+    hidden: ture
+    context:
+      webVersion: Vaata kirja veebis
+
+  - name: lv_LV
+    context:
+      webVersion: Atvērt vēstuli interneta pārlūkprogrammā
+
+  - name: ru_LV
+    context:
+      webVersion: Открыть письмо в программе ускоренного просмотра
+
+  - name: lt_LV
+    context:
+      webVersion: Atidaryti laišką per interneto naršyklę
+
+  - name: SV
+    context:
+      webVersion: Ser mailet konstigt ut? <br> Klicka här för webbversion
+
+  - name: fi_FI
+    context:
+      webVersion: Jos viesti ei näy oikein, lue uutiskirje tästä
+
+  - name: se_FI
+    context:
+      webVersion: Om du inte kan läsa det här meddelandet ordentligt, kan du läsa det här
+
+  - name: RU
+    context:
+      webVersion: Смотреть письмо онлайн
+
+  - name: DE
+    context:
+      webVersion: Falls Sie unseren Newsletter nicht sehen können, klicken Sie bitte hier
+
+
