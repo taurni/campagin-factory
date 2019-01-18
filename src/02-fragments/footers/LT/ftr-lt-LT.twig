@@ -4,30 +4,18 @@
     {% block left %}
         {#<span align="left" style="font-family:Arial, Helvetica, sans-serif; color:{{ theme.textColor }}; font-size:12px; line-height:14px; text-align:left;">{{ "Broneerimine ja reisiinfo"|upper}}</span><br>#}
 
-        {# Club One #}{#
-        {% if clubone %}
-            Club One'i klienditeenindus {% include "@link" with {text:"clubone@tallink.ee", href:"mailto:clubone@tallink.ee"} %}<br>
-        {% endif %}#}
-
-       {# #}{# Regular #}{#
-        {% if regular %}
-            Broneeringut saad muuta tel 640 9804<br>
-            Välismaalt helista tel +372 640 9808<br>
-        {% endif %}
-        <br>#}
         {# sent to #}
         Šis el. laiškas šsiųstas {% include "@dyn-field" with { field:"email" } %}<br>
         <br>
-
+        {# unsubscribe #}
+        Jei nebenorite gauti Tallink informacinio naujienlaiškio, atsisakykite {% include "@optout" with {text:"čia", href:"https://www.tallink.lv/lt/club-one-unsubscribe?unsub="} -%}.<br>
+        <br>
         {# Reply #}
-        Prašome nenaudoti el. pašto, iš kurio šis laiškas buvo išsiųstas, kad susisiektumėme su mumis. Susisiekite su Tallink {% include "@link" with {text:"čia.", href:"https://www.tallink.lv/lt/contacts"} %}<br>
+        Prašome nenaudoti el. pašto, iš kurio šis laiškas buvo išsiųstas, kad susisiektumėme su mumis.<br>
+        Susisiekite su Tallink {% include "@link" with {text:"čia.", href:"https://www.tallink.lv/lt/contacts"} %}<br>
         <br>
 
-        {# unsubscribe #}
-        {%- if unsubscribe %}
-            Jei nebenorite gauti Tallink informacinio naujienlaiškio, atsisakykite {% include "@optout" with {text:"čia", href:"https://www.tallink.lv/lt/club-one-unsubscribe?unsub="} -%}.<br>
-            <br>
-        {%- endif -%}
+
         {# Privacy #}
         {#Tallink lähtub oma klientide andmete kasutamisel {% include "@link" with {text:"isikuandmete kaitse põhimõtetest.", href:"https://www.tallink.ee/et/isikuandmete-kaitse"} %}<br>
         <br>#}
@@ -40,7 +28,7 @@
 
     {% block right %}
         {# social media #}
-        {#<span align="left" style="font-family:Arial, Helvetica, sans-serif; color:{{ theme.textColor }}; font-size:12px; line-height:14px; text-align:left;">Seko mums</span><br>#}
+        <span align="left" style="font-family:Arial, Helvetica, sans-serif; color:{{ theme.textColor }}; font-size:12px; line-height:14px; text-align:left;">Sek mūsų naujienas ar</span><br>
 
         <table border="0" cellpadding="0" cellspacing="0" >
             <tbody>

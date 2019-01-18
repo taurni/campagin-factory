@@ -4,32 +4,20 @@
     {% block left %}
         {#<span align="left" style="font-family:Arial, Helvetica, sans-serif; color:{{ theme.textColor }}; font-size:12px; line-height:14px; text-align:left;">{{ "Broneerimine ja reisiinfo"|upper}}</span><br>#}
 
-        {# -* customer support *- #}
-        {# Club One #}{#
-        {% if clubone %}
-            Club One'i klienditeenindus {% include "@link" with {text:"clubone@tallink.ee", href:"mailto:clubone@tallink.ee"} %}<br>
-        {% endif %}#}
-
-       {# Regular #}{#
-        {% if regular %}
-            Broneeringut saad muuta tel 640 9804<br>
-            Välismaalt helista tel +372 640 9808<br>
-        {% endif %}
-        <br>#}
-
         {# sent to #}
         Šis e-pasts ir nosūtīts {% include "@dyn-field" with { field:"email" } %}<br>
         <br>
+        {# unsubscribe #}
 
-        {# Reply #}
-        Saziņai lūdzam neizmantot e-pastu, no kura nosūtīta šī vēstule. Tallink kontakti {% include "@link" with {text:"šeit.", href:"https://www.tallink.lv/lv/contacts"} %}<br>
+        Ja nevēlies turpmāk saņemt Club One vēstules, atsakies, {% include "@optout" with {text:"šeit", href:"https://www.tallink.lv/lv/club-one-unsubscribe?unsub="} -%}.<br>
         <br>
 
-        {# unsubscribe #}
-        {%- if unsubscribe %}
-            Ja nevēlies turpmāk saņemt Club One vēstules, atsakies, {% include "@optout" with {text:"šeit", href:"https://www.tallink.lv/lv/club-one-unsubscribe?unsub="} -%}.<br>
-            <br>
-        {%- endif -%}
+        {# Reply #}
+        Saziņai lūdzam neizmantot e-pastu, no kura nosūtīta šī vēstule.<br>
+        Tallink kontakti {% include "@link" with {text:"šeit.", href:"https://www.tallink.lv/lv/contacts"} %}<br>
+        <br>
+
+
         {# Privacy #}
         {#Tallink lähtub oma klientide andmete kasutamisel {% include "@link" with {text:"isikuandmete kaitse põhimõtetest.", href:"https://www.tallink.ee/et/isikuandmete-kaitse"} %}<br>
         <br>#}

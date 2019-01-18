@@ -4,19 +4,11 @@
     {% block left %}
         {#<span align="left" style="font-family:Arial, Helvetica, sans-serif; color:{{ theme.textColor }}; font-size:12px; line-height:14px; text-align:left;">{{ "Broneerimine ja reisiinfo"|upper}}</span><br>#}
 
-        {# Club One #}{#
-        {% if clubone %}
-            Club One'i klienditeenindus {% include "@link" with {text:"clubone@tallink.ee", href:"mailto:clubone@tallink.ee"} %}<br>
-        {% endif %}#}
-
-       {# #}{# Regular #}{#
-        {% if regular %}
-            Broneeringut saad muuta tel 640 9804<br>
-            Välismaalt helista tel +372 640 9808<br>
-        {% endif %}
-        <br>#}
         {# sent to #}
         Это письмо было выслано по адресу {% include "@dyn-field" with { field:"email" } %}<br>
+        <br>
+        {# unsubscribe #}
+        Если больше не желаешь получать рассылку Tallink, откажись {% include "@optout" with {text:"здесь", href:"https://www.tallink.lv/ru/club-one-unsubscribe?unsub="} -%}.<br>
         <br>
 
         {# Reply #}
@@ -24,11 +16,7 @@
         Контакты {% include "@link" with {text:"здесь", href:"https://www.tallink.lv/ru/contacts"} %}<br>
         <br>
 
-        {# unsubscribe #}
-        {%- if unsubscribe %}
-            Если больше не желаешь получать рассылку Tallink, откажись {% include "@optout" with {text:"здесь", href:"https://www.tallink.lv/ru/club-one-unsubscribe?unsub="} -%}.<br>
-            <br>
-        {%- endif -%}
+
         {# Privacy #}
         {#Tallink lähtub oma klientide andmete kasutamisel {% include "@link" with {text:"isikuandmete kaitse põhimõtetest.", href:"https://www.tallink.ee/et/isikuandmete-kaitse"} %}<br>
         <br>#}
@@ -41,7 +29,7 @@
 
     {% block right %}
         {# social media #}
-        <span align="left" style="font-family:Arial, Helvetica, sans-serif; color:{{ theme.textColor }}; font-size:12px; line-height:14px; text-align:left; text-transform: uppercase">
+        <span align="left" style="font-family:Arial, Helvetica, sans-serif; color:{{ theme.textColor }}; font-size:12px; line-height:14px; text-align:left;">
             Социальные сети</span><br>
         <table border="0" cellpadding="0" cellspacing="0" >
             <tbody>
