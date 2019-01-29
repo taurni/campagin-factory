@@ -1,0 +1,34 @@
+{% embed "@co-footer-template" with { appTitle: "Lataa mobiilisovelluksemme", logo: "combined", logoLink: "https://www.tallinksilja.fi"} %}
+    {% block left %}
+        Ethän vastaa tähän viestiin, sillä vastaus ei palaudu lähettäjälle. <br>
+        <br>
+        Mikäli sinulla ei ole matkavaraukseen liittyviä asioita tai et halua jatkossa saada matkanjärjestäjien sähköpostiviestejä, voit olla yhteydessä
+        <br>
+        {% include "@link" with {text:"matkatoimisto@tallinksilja.com.", href :"mailto:matkatoimisto@tallinksilja.com"} %}
+        <br>
+        <br>
+        Osoiterekisteri: Tallink Silja Oy:n matkatoimistorekisteri <br>
+
+    {% endblock %}
+
+    {% block right %}
+        <span align="left" style="font-family:Arial, Helvetica, sans-serif; color:#F5F8F7; font-size:12px; line-height:14px; text-align:left;">SEURAA MEITÄ SOSIAALISESSA MEDIASSA</span><br>
+
+        <table border="0" cellpadding="0" cellspacing="0" width="184">
+            <tbody>
+            <tr>
+                <td>{% include "@social" with {media:"twitter", url:"https://twitter.com/tallinksilja"} %}</td>
+                <td>{% include "@social" with {media:"youtube", url:"https://www.youtube.com/user/tallinksiljasuomi"} %}</td>
+                <td>{% include "@social" with {media:"linkedin", url:"https://www.linkedin.com/company/tallink-silja-ab"} %}</td>
+                <td width="100%">&nbsp;</td>
+            </tr>
+
+            <tr>
+                <td align="left" colspan="4" height="20" style="border-collapse:collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-line-height-rule: exactly; line-height: 20px;" valign="top"><!--[if gte mso 15]>&nbsp;<![endif]--></td>
+            </tr>
+            </tbody>
+        </table>
+
+
+    {% endblock %}
+{% endembed %}

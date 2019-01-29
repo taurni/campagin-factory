@@ -1,0 +1,41 @@
+{% embed "@co-footer-template" with { appTitle: "Lataa mobiilisovelluksemme", logo: "combined", logoLink: "https://www.tallinksilja.fi"} %}
+    {% block left %}
+        <span align="left" style="font-family:Arial, Helvetica, sans-serif; color:{{ theme.textColor }}; font-size:12px; line-height:14px; text-align:left;">{{ "Yhteystiedot"|upper }}</span><br>
+        <br>
+        Kokous- ja ryhmämyynti<br>
+        010 804 123<br>
+        (8,35 snt/puh + 16,69 snt/min)<br>
+        <br>
+        Palvelemme arkisin 9.00-17.00<br>
+        <br>
+        {% include "@link" with {text:"Pyydä tarjous", href:"http://links.mkt1434.com/ctt?kn=11&ms=NTc4NzIzNjYS1&r=MzgyODIyMzA3NzY2S0&b=0&j=MTUyMzUxNjgyNwS2&mt=1&rt=0"} %}<br>
+        <br>
+        Ethän vastaa tähän viestiin. Jos sinulla on kysyttävää, ole yhteydessä osoitteeseen
+        {% include "@link" with {text:"b2b@tallinksilja.com", href:"mailto:b2b@tallinksilja.com"} %}
+        Jos et enää halua vastaanottaa Tallink Silja B2B-uutiskirjettä, voit poistua uutiskirjeen tilaajalistalta
+        {% include "@link" with {text:"tästä", href:"http://links.mkt1434.com/servlet/OneClickOptOutServlet?m=57872366&r=MzgyODIyMzA3NzY2S0&b=0&j=MTUyMzUxNjgyNwS2&mt=1&rt=0"} %}.<br>
+        <br>
+        Osoiterekisteri: Tallink Silja Business Mail <br>
+    {% endblock %}
+
+    {% block right %}
+        <span align="left" style="font-family:Arial, Helvetica, sans-serif; color:#F5F8F7; font-size:12px; line-height:14px; text-align:left;">SEURAA MEITÄ SOSIAALISESSA MEDIASSA</span><br>
+
+        <table border="0" cellpadding="0" cellspacing="0" width="184">
+            <tbody>
+            <tr>
+                <td>{% include "@social" with {media:"twitter", url:"https://twitter.com/tallinksilja"} %}</td>
+                <td>{% include "@social" with {media:"youtube", url:"https://www.youtube.com/user/tallinksiljasuomi"} %}</td>
+                <td>{% include "@social" with {media:"linkedin", url:"https://www.linkedin.com/company/tallink-silja-ab"} %}</td>
+                <td width="100%">&nbsp;</td>
+            </tr>
+
+            <tr>
+                <td align="left" colspan="4" height="20" style="border-collapse:collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-line-height-rule: exactly; line-height: 20px;" valign="top"><!--[if gte mso 15]>&nbsp;<![endif]--></td>
+            </tr>
+            </tbody>
+        </table>
+
+
+    {% endblock %}
+{% endembed %}
