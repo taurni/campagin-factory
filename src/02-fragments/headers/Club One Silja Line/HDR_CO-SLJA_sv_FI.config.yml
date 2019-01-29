@@ -94,4 +94,5 @@ variants:
   - name: version2
     context:
       noLogin: true
+      groupId: 1539080343004
 

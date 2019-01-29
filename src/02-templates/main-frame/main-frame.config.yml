@@ -11,6 +11,7 @@ variants:
   - name: ee_EE
     context:
       webVersion: Vaata kirja veebis
+      default: true
 
   - name: ru_EE
     hidden: ture

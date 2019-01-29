@@ -94,3 +94,4 @@ variants:
   - name: version2-dynamic
     context:
        noLogin: true
+       groupId: 1539080343005

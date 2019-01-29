@@ -83,8 +83,8 @@ variants:
     context:
       label: Default
       index: 0
-      #    expression: ""
-#      "#ffc8be"
+#     expression: ""
+#     "#ffc8be"
       default: true
       levelExpire: true
       points: true
@@ -93,4 +93,5 @@ variants:
   - name: version2-dynamic
     context:
       noLogin: true
+      groupId: 1539080343003
 
