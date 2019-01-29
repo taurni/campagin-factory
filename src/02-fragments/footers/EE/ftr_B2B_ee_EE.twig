@@ -1,0 +1,32 @@
+{% embed "@co-footer-template"
+    with {appTitle: "Lae alla meie äpp",logo: "tallink",logoLink: "https://www.tallink.ee/et/vali-reis"}
+%}
+    {% block left %}
+        <span align="left" style="font-family:Arial, Helvetica, sans-serif; color:{{ theme.textColor }}; font-size:12px; line-height:14px; text-align:left;">{{ "ÄRIKLIENDIOSAKOND"|upper}}</span><br>
+        <br>
+        Broneerimine ja info: +372 640 9999 <br>
+        E-post {% include "@link" with {text:"corporate@tallink.ee", href:"mailto:corporate@tallink.ee"} %}<br>
+        <br>
+        Avatud E-R 8.00–20.00 ja L-P 9.00–18.00 <br>
+        <br>
+        Palume sellele kirjale mitte vastata. Küsimuste korral kirjuta meile {% include "@link" with {text:"corporate@tallink.ee", href:"mailto:corporate@tallink.ee"} %}<br>
+    {% endblock %}
+
+    {% block right %}
+        {# social media #}
+        <span align="left" style="font-family:Arial, Helvetica, sans-serif; color:{{ theme.textColor }}; font-size:12px; line-height:14px; text-align:left;">JÄLGI MEID</span><br>
+
+        <table border="0" cellpadding="0" cellspacing="0" >
+            <tbody>
+            <tr>
+                <td>{% include "@social" with {media:"fb", url:"https://www.facebook.com/TallinkEesti"} %}</td>
+                <td>{% include "@social" with {media:"inst", url:"https://www.instagram.com/Tallink_ee/"} %}</td>
+                <td>{% include "@social" with {media:"youtube", url:"http://www.youtube.com/user/TallinkEesti"} %}</td>
+            </tr>
+            <tr>
+                <td align="left" colspan="3" height="20" style="border-collapse:collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-line-height-rule: exactly; line-height: 20px;" valign="top"><!--[if gte mso 15]>&nbsp;<![endif]--></td>
+            </tr>
+            </tbody>
+        </table>
+    {% endblock %}
+{% endembed %}
