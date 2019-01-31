@@ -13,6 +13,7 @@
     {% if media == "linkedin" %}http://res.messages.tallink.com/res/tallink_mkt_prod6/b4d86438b9c03440e1c8b8d76c207dce85901f1b036ba5be1071830a34c041e5.png{% endif %}
     {% if media == "draugiem" %}http://res.messages.tallink.com/res/tallink_mkt_prod6/fa1ac87e33ad4c7a14cc4a0d27c78d91dcf6406996c5a800f625639e6925674c.png{% endif %}
     {% if media == "vk" %}http://res.messages.tallink.com/res/tallink_mkt_prod6/da8eef608e7aef2af45d68a978b27f2d948e7a121f465a14830af74e7d21a0a4.png{% endif %}
+    {% if media == "weibo" %}http://res.messages.tallink.com/res/tallink_mkt_prod6/eeef0dd2bd152a7730a9f8a900e707844e8b534a74fbf6fa6604d35c7b6665c9.png{% endif %}
 {% endset %}
 
 {% set width %}
@@ -24,5 +25,5 @@
 {% endset %}
 
     <a href="{{ url }}" name="{{ name }}" target="_blank" style="color: {{ theme.textColor }}; text-decoration: none">
-        <img border="0" name="{{ name }}" src="{{imgSrc}}" style="display: block" width="{{width}}" xt="SPIMAGE" title="{{ title|default("social media") }}" alt="{{ alt|default("social mendia icon") }}">
+        <img border="0" name="{{ name }}" src="{{imgSrc}}" style="display: block" width="{{width}}" xt="SPIMAGE" title="{{ title|default("social media") }}" alt="{{ alt|default("social media icon") }}">
     </a>
