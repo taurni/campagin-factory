@@ -1,4 +1,5 @@
-preview: "@preview--header"
+#preview: "@preview--header"
+preview: "@preview--container"
 collated: false
 context:
   groupId: 1539080342105
