@@ -5,13 +5,10 @@ context:
 
 variants:
   - name: default
-    context:
-      default: true
 
   - name: ee_EE
     context:
       webVersion: Vaata kirja veebis
-      default: true
 
   - name: ru_EE
     hidden: ture
