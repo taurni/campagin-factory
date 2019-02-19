@@ -1,0 +1,92 @@
+<body class="dc-highlight">
+<div class="container" data-name-before="It's easy!" data-name-after="Drag and drop your components and start building your email">
+    <div class="structure" data-structure-id="1-1-column" data-structure-name="richtext.structure_1_1_column">
+        <table align="center" border="0" cellpadding="0" cellspacing="0" class="widthtable" style="min-width: 650px;" width="650">
+            <tbody>
+            <tr>
+                <td align="center" class="colspan1" data-name="Drag a new header component here.">
+                    <div style="padding: 0;">
+                        <table align="center" cellpadding="0" cellspacing="0" border="0" style="width: 100%;">
+                            <tbody>
+                            <tr>
+                                <th class="colspan1" bgcolor="{{ theme.bgColor }}" style="color: {{ theme.textColor }}; background-repeat: no-repeat; background-size: auto; font-weight: normal; text-align: left; width: 100%;">
+                                    <div class="fragment component" contenteditable="false" data-component-id="text" data-component-name="richtext.component_text">
+                                            <!--[if mso]><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td style="background-color: #004152;"><![endif]-->
+                                            <table align="center" cellpadding="0" cellspacing="0" border="0" style="width: 100%;">
+                                                <tbody>
+                                                <tr>
+                                                    <th class="colspan1" style="background-repeat: no-repeat; background-size: auto; font-weight: normal; text-align: left; width: 100%;">
+                                                        <table align="center" border="0" cellpadding="0" cellspacing="0" class="widthtable" width="650">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td align="left" colspan="3" height="15" style="border-collapse: collapse; line-height: 15px; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0;" valign="top">
+                                                                    <!--[if gte mso 15]>&nbsp;<![endif]-->
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="hide" width="30" style="border-collapse: collapse; padding: 0;">
+                                                                </td>
+                                                                <td class="widthtable" valign="top" width="550" style="border-collapse: collapse; padding: 0;" data-nl-format="datetime">
+                                                                    {#<!--[if (mso)|(IE)]>#}
+                                                                    {#<table cellpadding="0" cellspacing="0" border="0" width="550">#}
+                                                                        {#<tr>#}
+                                                                            {#<td valign="top" width="254"><![endif]-->#}
+
+                                                                            {% for link in links %}
+                                                                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="widthtable{% if loop.index < 4 %} separator{% endif %}" width="25%">
+                                                                                <tbody>
+                                                                                <tr>
+                                                                                    <td align="left" colspan="3" height="10" style="border-collapse: collapse; line-height: 10px; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0;" valign="top">
+                                                                                        <!--[if gte mso 15]>&nbsp;<![endif]-->
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td width="10" style="border-collapse: collapse; padding: 0;">
+                                                                                    </td>
+                                                                                    <td align="center" style="border-collapse: collapse; padding: 0;">
+                                                                                        <a href="{{ link.link }}"  style="text-decoration: none; color: {{ theme.textColor }};" name="www_tallink_ee_et_club_one_" data-id="al153717183947223fab7">
+                                                                                            {{ link.text }}
+                                                                                        </a>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td align="left" height="10" style="border-collapse: collapse; line-height: 10px; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0;" valign="top">
+                                                                                        <!--[if gte mso 15]>&nbsp;<![endif]-->
+                                                                                    </td>
+                                                                                </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                            {% endfor %}
+
+                                                                </td>
+                                                                <td class="hide" width="30" style="border-collapse: collapse; padding: 0;">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" colspan="3" height="10" style="border-collapse: collapse; line-height: 10px; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0;" valign="top">
+                                                                    <!--[if gte mso 15]>&nbsp;<![endif]-->
+                                                                </td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </th>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+
+                                            <!--[if mso]></td></tr></table><![endif]-->
+
+                                    </div>
+                                </th>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>

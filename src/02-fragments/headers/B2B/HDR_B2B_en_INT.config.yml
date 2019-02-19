@@ -1,0 +1,12 @@
+preview: "@preview--header"
+context:
+  theme: "@theme--bronze"
+  links:
+    - text: Book a cruise
+      link: https://booking.tallink.com/?voyageType=ROUTETRIP&from=hel&to=sto&locale=en&country=XZ&utm_source=international_new_sales&utm_medium=email&utm_campaign=february_nl
+    - text: Timetables
+      link: https://www.tallinksilja.com/routes-and-timetables
+    - text: Destinations
+      link: https://www.tallinksilja.com/ports-and-destinations
+    - text: Our Fleet
+      link: https://www.tallinksilja.com/tallink-silja-fleet
