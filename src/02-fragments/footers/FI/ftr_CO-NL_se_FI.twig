@@ -13,14 +13,14 @@
                 {% endif %}
             </div>
         {%- endfor %}
-
-        Vi betjänar mån - fre 8-19 och lör - sön 9-17<br>
+        mån - fre 8-19 och lör - sön 9-17 <br>
+        <br>
+        {% include "@link" with {text:"Resbutiker" ,src:"https://www.tallinksilja.fi/matkamyymalat"} %} <br>
         <br>
         Du kan inte besvara detta e-postmeddelande, eftersom vi inte behandlar svaren.<br>
+        Om du inte längre önskar få Club One -nyhetsbrev kan du avbeställa
+        {% include "@optout" with {text:"här.", href:"http://www.tallinksilja.fi/uutiskirje-tilauksen-peruutus/?unsub="} %}<br>
         <br>
-        Om du inte längre önskar få Club One -nyhetsbrev kan du avbeställa genom att logga in på Club One -webbtjänsten. Ta bort X från 'Haluan Club One -etuja ja uutisia sähköpostitse'.<br>
-        <br>
-
         Adressregister: Club One -nyhetsbrev<br>
         Meddelandet är skickat till: {% include "@dyn-field" with { field: "email"} %}<br>
         <br>

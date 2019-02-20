@@ -13,12 +13,14 @@
                 {% endif %}
             </div>
         {%- endfor %}
-        Palvelemme ma-pe 8-19 ja la-su 9-17<br>
+        ma-pe 8-19 ja la-su 9-17<br>
         <br>
-        Ethän vastaa tähän viestiin, sillä viesti ei palaudu lähettäjälle.<br>
+        {% include "@link" with {text:"Matkamyymälät" ,src:"https://www.tallinksilja.fi/matkamyymalat"} %}<br>
         <br>
-        Jos et jatkossa halua tätä uutiskirjettä, voit poistaa itsesi Club One -uutiskirjeen tilaajalistalta kirjauduttuasi {% include "@link" with {text:"Club One -verkkopalveluun.", href:"https://urldefense.proofpoint.com/v2/url?u=http-3A__links.mkt1434.com_ctt-3Fkn-3D2-26ms-3DNTgwMjYzMDIS1-26r-3DMzQ3MjA4MzYwODU2S0-26b-3D0-26j-3DMTU0MTgyMjc2MgS2-26mt-3D1-26rt-3D3&d=DwMFaQ&c=VasWFa-FUnbrdTI09mWIwIv701nNYRjjjAKdtG85aEk&r=RUn7-XwZClDw6hilfgZwXT0zduglahAw4eOtsEAd4mD_iEKI_wlW7Y9z03ejorpR&m=bwX0hkrSRzv82mQJss99ZjLzFa5D5JMXB1ZgCZusIv0&s=bYM94k-r4S6qlmUKuDoFcIckiYfTjWRGwxvbi0FGWG0&e="} %}<br>
-        Poista rasti kohdasta 'Haluan Club One -etuja ja uutisia sähköpostitse'.<br>
+        Ethän vastaa tähän viestiin, sillä viesti ei palaudu lähettäjälle. <br>
+        Jos et jatkossa halua tätä uutiskirjettä, voit poistaa itsesi Club One -uutiskirjeen tilaajalistalta
+        {% include "@optout" with {text:"tästä.", href:"http://www.tallinksilja.fi/uutiskirje-tilauksen-peruutus/?unsub="} %}<br>
+
         <br>
         Osoiterekisteri: Club One -uutiskirje<br>
         Viesti lähetetty osoitteeseen: {% include "@dyn-field" with { field: "email"} %}<br>
