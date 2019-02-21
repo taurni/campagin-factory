@@ -1,0 +1,5 @@
+context:
+  foo: bar
+  alt:
+    fb: Facebook logo
+    inst: Instagram logo
