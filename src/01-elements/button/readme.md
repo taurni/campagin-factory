@@ -1,3 +1,4 @@
 * **buttonText** - Button text
-* **buttonMargin** - Define button margin-top (default: 10)
+* **marginMultiplier** - Define button margin-top multiplyer by 8 (default: 2)
 * **buttonAlign** - Button alignment (default: left)
+* **size** - options: ["sm", "md", "lg"] Button size **default: "md"**

@@ -1,0 +1,12 @@
+variants:
+  - name: default
+    hidden: true
+  - name: small
+    context:
+      size: sm
+  - name: medium
+    context:
+      size: md
+  - name: large
+    context:
+      size: lg
