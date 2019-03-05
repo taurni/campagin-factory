@@ -48,6 +48,14 @@ variants:
       buttonColor: *ff
       action: *actn
 
+  - name: sunset
+    context:
+      bgColor: *ss
+      textColor: *mn
+      buttonBg: *mn
+      buttonColor: *ff
+      action: *actn
+
 ## Point leveles
   - name: Bronze
     context:
