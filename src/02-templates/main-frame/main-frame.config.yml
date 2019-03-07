@@ -33,7 +33,7 @@ variants:
 
   - name: fi_FI
     context:
-      webVersion: Jos viesti ei näy oikein, lue uutiskirje tästä
+      webVersion: Jos viesti ei näy oikein, lue se tästä
 
   - name: se_FI
     context:
