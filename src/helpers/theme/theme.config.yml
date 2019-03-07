@@ -6,6 +6,7 @@ context:
   sunset: &ss "#ffc8be"
   mist: &mst "#F5F5F0"
   action: &actn "#00ecc9"
+  action-h: &actn-h "#6dffdc"
   white: &ff "#ffffff"
   silver: &slvr "#a0aaaf"
   gold: &gld "#b9a879"
@@ -44,8 +45,8 @@ variants:
     context:
       bgColor: *pl
       textColor: *mn
-      buttonBg: *mn
-      buttonColor: *ff
+#      buttonBg: *mn
+#      buttonColor: *ff
       action: *actn
 
   - name: sunset

@@ -47,7 +47,7 @@
         <tr><td width="17" bgcolor="{{ theme.buttonBg|default("#00ecc9") }}">&nbsp;</td><td align="center" height="32" bgcolor="{{ theme.buttonBg|default("#00ecc9") }}">
     <![endif]-->
     <div class="button-container" style="{{ buttonStyles }}">
-        <a href="{{ href|default("#") }}" style="text-align: center;margin: auto;max-width: 100%;display: inline-block;color: {{ theme.buttonColor|default("#004152") }};background-color:{{ theme.buttonBg|default("#00ecc9") }};font-weight:500;font-family:Arial, Helvetica, sans-serif;font-size:{{ s.font }};text-transform:uppercase; line-height: inherit; text-decoration: none; cursor: pointer" contenteditable="true">{{ buttonText | default("Button") }}</a>
+        <a href="{{ href|default("#") }}" style="{{ buttonStyles }}" contenteditable="true">{{ buttonText | default("Button") }}</a>
     </div>
     <!--[if mso]></td><td width="17" bgcolor="{{ theme.buttonBg|default("#00ecc9") }}">&nbsp;</td></tr></table><![endif]-->
     <!--[if mso]></td></tr></table><![endif]-->
