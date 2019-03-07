@@ -83,8 +83,6 @@ variants:
     context:
       bgColor: *mst
       textColor: *mn
-      buttonBg: *mn
-      buttonColor: *ff
       action: *actn
       font: *f-s
 
@@ -92,8 +90,6 @@ variants:
     context:
       bgColor: *ss
       textColor: *mn
-      buttonBg: *mn
-      buttonColor: *ff
       action: *actn
       font: *f-s
 
