@@ -1,0 +1,10 @@
+hidden: true
+context:
+  blockData:
+    blockWidth: 266
+    blockImage: "https://www.tallink.ee/documents/10192/66843353/344x200_1.png"
+    imageWidth: 266
+    blockTitle: "Lorem ipsum dolor"
+    blockText: " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, quod, voluptas! Adipisci consectetur ipsa nobis quia voluptatem. Accusamus aliquam animi commodi."
+    blockButtonText: "Lorem ipsum"
+    marginMultiplier: 2

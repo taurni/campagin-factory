@@ -1,4 +1,7 @@
 label: Tallink
+context:
+  blockData: '@b3-templ.blockData'
+
 variants:
   - name: default
     hidden: true
