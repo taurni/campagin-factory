@@ -17,3 +17,6 @@ variants:
   - name: sunset
     context:
       theme: '@theme--sunset'
+  - name: cargo
+    context:
+      theme: '@theme--cargo'

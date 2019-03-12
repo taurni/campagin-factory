@@ -8,6 +8,7 @@ context:
   white: &ff "#ffffff"
   silver: &slvr "#a0aaaf"
   gold: &gld "#b9a879"
+  cargo: &crg "#004895"
 
 variants:
   - name: default
@@ -73,3 +74,8 @@ variants:
       textColor: *ff
       buttonBg: *actn
       buttonColor: *mn
+
+  - name: Cargo
+    context:
+      bgColor: *crg
+      textColor: *ff

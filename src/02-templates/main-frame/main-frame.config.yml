@@ -47,4 +47,9 @@ variants:
     context:
       webVersion: Falls Sie unseren Newsletter nicht sehen können, klicken Sie bitte hier
 
+  - name: Cargo
+    context:
+      text: This message contais graphics. If you do not see the graphics,
+      webVersion:  clic here to view.
+
 
