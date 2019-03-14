@@ -1,0 +1,16 @@
+label: Silja
+variants:
+  - name: default
+    hidden: true
+  - name: mist
+    context:
+      theme: '@theme--mist-slj'
+  - name: Sunset
+    context:
+      theme: '@theme--sunset-slj'
+  - name: midnight
+    context:
+      theme: '@theme--midnight-slj'
+  - name: buoylight
+    context:
+      theme: '@theme--buoylight-slj'

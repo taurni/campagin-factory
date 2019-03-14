@@ -1,0 +1,19 @@
+label: Tallink
+context:
+  blockData: '@b3-templ.blockData'
+
+variants:
+  - name: default
+    hidden: true
+  - name: Seafoam
+    context:
+      theme: '@theme--seafoam'
+  - name: midnight
+    context:
+      theme: '@theme--midnight'
+  - name: buoylight
+    context:
+      theme: '@theme--buoylight'
+  - name: poollight
+    context:
+      theme: '@theme--poollight'

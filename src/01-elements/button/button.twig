@@ -33,10 +33,6 @@
     background-color:{{ theme.buttonBg|default("#00ecc9") }};
     font-size:{{s.font}};
     line-height: {{ s.lineHeight }};
-    padding-left: 17px;
-    padding-right: 17px;
-    padding-top:{{s.padding}};
-    padding-bottom: {{s.padding}};
 {%- endset -%}
 
 <div class="fragment component" data-component-id="button" style="width: 100%; text-align: {{ align }};" data-component-name="richtext.component_button" contenteditable="false">
@@ -46,8 +42,8 @@
         <table cellpadding="0" cellspacing="0" border="0">
         <tr><td width="17" bgcolor="{{ theme.buttonBg|default("#00ecc9") }}">&nbsp;</td><td align="center" height="32" bgcolor="{{ theme.buttonBg|default("#00ecc9") }}">
     <![endif]-->
-    <div class="button-container" style="{{ buttonStyles }}">
-        <a href="{{ href|default("#") }}" style="text-align: center;margin: auto;max-width: 100%;display: inline-block;color: {{ theme.buttonColor|default("#004152") }};background-color:{{ theme.buttonBg|default("#00ecc9") }};font-weight:500;font-family:Arial, Helvetica, sans-serif;font-size:{{ s.font }};text-transform:uppercase; line-height: inherit; text-decoration: none; cursor: pointer" contenteditable="true">{{ buttonText | default("Button") }}</a>
+    <div class="button-container" style="{{ buttonStyles }}     padding-left: 17px;padding-right: 17px;padding-top:{{s.padding}};padding-bottom: {{s.padding}};">
+        <a href="{{ href|default("#") }}" style="{{ buttonStyles }}" contenteditable="true">{{ buttonText | default("Button") }}</a>
     </div>
     <!--[if mso]></td><td width="17" bgcolor="{{ theme.buttonBg|default("#00ecc9") }}">&nbsp;</td></tr></table><![endif]-->
     <!--[if mso]></td></tr></table><![endif]-->

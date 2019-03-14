@@ -4,10 +4,15 @@ context:
   buoylight: &bl "#cdf8eb"
   poollight: &pl "#c2f7ff"
   sunset: &ss "#ffc8be"
+  mist: &mst "#F5F5F0"
   action: &actn "#00ecc9"
+  action-h: &actn-h "#6dffdc"
   white: &ff "#ffffff"
   silver: &slvr "#a0aaaf"
   gold: &gld "#b9a879"
+  fontSilja: &f-s "Gorgia ,serif"
+  font: &f-t "Arial, Helvetica, sans-serif"
+  fontSize: 14px
   cargo: &crg "#004895"
 
 variants:
@@ -42,11 +47,11 @@ variants:
     context:
       bgColor: *pl
       textColor: *mn
-      buttonBg: *mn
-      buttonColor: *ff
+#      buttonBg: *mn
+#      buttonColor: *ff
       action: *actn
 
-  - name: Sunset
+  - name: sunset
     context:
       bgColor: *ss
       textColor: *mn
@@ -54,6 +59,7 @@ variants:
       buttonColor: *ff
       action: *actn
 
+## Point leveles
   - name: Bronze
     context:
       bgColor: *mn
@@ -74,6 +80,38 @@ variants:
       textColor: *ff
       buttonBg: *actn
       buttonColor: *mn
+
+# Silja line
+  - name: mist-slj
+    context:
+      bgColor: *mst
+      textColor: *mn
+      action: *actn
+      font: *f-s
+      fontSize: 15px
+
+  - name: sunset-slj
+    context:
+      bgColor: *ss
+      textColor: *mn
+      action: *actn
+      font: *f-s
+      fontSize: 15px
+
+  - name: midnight-slj
+    context:
+      bgColor: *mn
+      textColor: *ff
+      font: *f-s
+      fontSize: 15px
+
+  - name: buoylight-slj
+    context:
+      bgColor: *bl
+      textColor: *mn
+      action: *actn
+      font: *f-s
+      fontSize: 15px
 
   - name: Cargo
     context:

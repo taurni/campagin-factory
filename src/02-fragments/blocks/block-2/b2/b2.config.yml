@@ -1,3 +1,6 @@
+label: Tallink
+context:
+  blockData: '@b2-templ.blockData'
 
 variants:
   - name: default
@@ -14,6 +17,3 @@ variants:
   - name: poollight
     context:
       theme: '@theme--poollight'
-  - name: sunset
-    context:
-      theme: '@theme--sunset'
