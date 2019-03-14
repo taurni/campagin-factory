@@ -12,6 +12,7 @@ context:
   gold: &gld "#b9a879"
   fontSilja: &f-s "Gorgia ,serif"
   font: &f-t "Arial, Helvetica, sans-serif"
+  fontSize: 14px
 
 variants:
   - name: default
@@ -86,6 +87,7 @@ variants:
       textColor: *mn
       action: *actn
       font: *f-s
+      fontSize: 15px
 
   - name: sunset-slj
     context:
@@ -93,12 +95,14 @@ variants:
       textColor: *mn
       action: *actn
       font: *f-s
+      fontSize: 15px
 
   - name: midnight-slj
     context:
       bgColor: *mn
       textColor: *ff
       font: *f-s
+      fontSize: 15px
 
   - name: buoylight-slj
     context:
@@ -106,3 +110,4 @@ variants:
       textColor: *mn
       action: *actn
       font: *f-s
+      fontSize: 15px

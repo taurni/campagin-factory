@@ -61,7 +61,8 @@ fractal.components.set('ext', '.twig');
 fractal.components.set('default.context', {
     theme: {
         bgColor: "#f5f8f7",
-        textColor: "#004152"
+        textColor: "#004152",
+        fontSize: "14px"
     }
 
 });
