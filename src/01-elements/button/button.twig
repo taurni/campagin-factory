@@ -18,7 +18,8 @@
 }  %}
 {% set s = {} %}
 {% for key, variant in sizes %}
-    {% if key == size|default("md") %}{% set s = variant %}{% endif %}
+    {% if key == size or "md" %}
+{{ key }} :: {{size}} <br>{% set s = variant %}{% endif %}
 {%  endfor %}
 
 {%- set buttonStyles -%}
@@ -32,7 +33,7 @@
     color: {{ theme.buttonColor|default("#004152") }};
     background-color:{{ theme.buttonBg|default("#00ecc9") }};
     font-size:{{s.font}};
-    line-height: {{ s.lineHeight }};
+    {% if s.lineHeight %}line-height: {{ s.lineHeight }};{% endif %}
 {%- endset -%}
 
 <div class="fragment component" data-component-id="button" style="width: 100%; text-align: {{ align }};" data-component-name="richtext.component_button" contenteditable="false">
