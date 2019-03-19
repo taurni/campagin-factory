@@ -14,6 +14,7 @@ context:
   font: &f-t "Arial, Helvetica, sans-serif"
   fontSize: 14px
   cargo: &crg "#004895"
+  lineHeight: 18px;
 
 variants:
   - name: default
@@ -89,6 +90,7 @@ variants:
       action: *actn
       font: *f-s
       fontSize: 15px
+      lineHeight: 19px
 
   - name: sunset-slj
     context:
@@ -97,6 +99,7 @@ variants:
       action: *actn
       font: *f-s
       fontSize: 15px
+      lineHeight: 19px
 
   - name: midnight-slj
     context:
@@ -104,6 +107,7 @@ variants:
       textColor: *ff
       font: *f-s
       fontSize: 15px
+      lineHeight: 19px
 
   - name: buoylight-slj
     context:
@@ -112,6 +116,7 @@ variants:
       action: *actn
       font: *f-s
       fontSize: 15px
+      lineHeight: 19px
 
   - name: Cargo
     context:

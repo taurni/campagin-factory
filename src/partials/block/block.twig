@@ -39,7 +39,7 @@
     </tr>
     <tr>
         <td class="colspan1" align="left"
-            style="font-family:{{theme.font}}; color:{{ theme.textColor }}; font-size:{{theme.fontSize}}; line-height:16px; text-align:left;"
+            style="font-family:{{theme.font}}; color:{{ theme.textColor }}; font-size:{{theme.fontSize}}; line-height:{{theme.lineHeight}}; text-align:left;"
             valign="top">
             {% include "@text" with {textContent:blockText} %}
         </td>
@@ -54,7 +54,7 @@
     </tr>
     <tr>
         <td class="colspan1" align="left"
-            style="font-family:{{theme.font}}; color:{{ theme.textColor }}; font-size:{{theme.fontSize}}; line-height:16px; text-align:left;"
+            style="font-family:{{theme.font}}; color:{{ theme.textColor }}; font-size:{{theme.fontSize}}; line-height:{{theme.lineHeight}}; text-align:left;"
             valign="top">
             <span style="display: inline-block; text-decoration: line-through; color:{{ theme.textColor }}">{% include "@text" with {textContent:price.old} %}</span>
             <span style="display: inline-block; font-family:Arial, Helvetica, sans-serif; color:{{ theme.textColor }}; font-size:16px; line-height:18px; text-align:left; font-weight: bold;">{% include "@text" with {textContent:price.new} %}</span>
