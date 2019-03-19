@@ -8,6 +8,13 @@ context:
       index: 1
       expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.profile.cusTierLevel === 'GOLD'))"
       content: Club One Gold -asiakkaat<br>010 80 4132<br>(8,35 snt/puh + 16,69 snt/min)<br>
+
+    - label: refular
+      index: 2
+      expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.profile.cusTierLevel !== 'GOLD')) || (/*@nlEnumeration*/(context.profile.cusTierLevel !== 'SILVER'))||(/*@nlEnumeration*/(context.profile.cusTierLevel !== 'BRONZE'))"
+      content: Club One Gold -asiakkaat<br>0600 157 00<br>(8,35 snt/puh + 16,69 snt/min)<br>
+
     - label: Default
       index: 0
       default: true
+

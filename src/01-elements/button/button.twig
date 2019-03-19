@@ -5,10 +5,12 @@
     sm: {
         font: "14px",
         padding: "6px",
+        lineHeight: "normal",
     },
     md: {
         font: "16px",
         padding: "11px",
+        lineHeight: "normal",
     },
     lg: {
         font: "20px",
@@ -17,8 +19,11 @@
     }
 }  %}
 {% set s = {} %}
+{# set default button size#}
+{% if not size %}{% set size = "md" %}{% endif %}
+{# get parameters for size#}
 {% for key, variant in sizes %}
-    {% if key == size|default("md") %}{% set s = variant %}{% endif %}
+    {% if key == size %}{% set s = variant %}{% endif %}
 {%  endfor %}
 
 {%- set buttonStyles -%}
