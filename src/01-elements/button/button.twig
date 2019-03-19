@@ -5,10 +5,12 @@
     sm: {
         font: "14px",
         padding: "6px",
+        lineHeight: "normal",
     },
     md: {
         font: "16px",
         padding: "11px",
+        lineHeight: "normal",
     },
     lg: {
         font: "20px",
@@ -17,9 +19,11 @@
     }
 }  %}
 {% set s = {} %}
+{# set default button size#}
+{% if not size %}{% set size = "md" %}{% endif %}
+{# get parameters for size#}
 {% for key, variant in sizes %}
-    {% if key == size or "md" %}
-{{ key }} :: {{size}} <br>{% set s = variant %}{% endif %}
+    {% if key == size %}{% set s = variant %}{% endif %}
 {%  endfor %}
 
 {%- set buttonStyles -%}
@@ -33,7 +37,7 @@
     color: {{ theme.buttonColor|default("#004152") }};
     background-color:{{ theme.buttonBg|default("#00ecc9") }};
     font-size:{{s.font}};
-    {% if s.lineHeight %}line-height: {{ s.lineHeight }};{% endif %}
+    line-height: {{ s.lineHeight }};
 {%- endset -%}
 
 <div class="fragment component" data-component-id="button" style="width: 100%; text-align: {{ align }};" data-component-name="richtext.component_button" contenteditable="false">
