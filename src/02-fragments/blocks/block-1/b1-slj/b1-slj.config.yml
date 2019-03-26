@@ -14,3 +14,7 @@ variants:
   - name: buoylight
     context:
       theme: '@theme--buoylight-slj'
+  - name: seafoam
+    hidden: true
+    context:
+      theme: '@theme--seafoam-slj'

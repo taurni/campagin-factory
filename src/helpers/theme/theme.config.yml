@@ -132,6 +132,15 @@ variants:
       font: *f-s
       fontSize: 15px
 
+  - name: seafoam-slj
+    context:
+      bgColor: *sf
+      titleColor: *mn
+      textColor: *mn
+      action: *actn
+      font: *f-s
+      fontSize: 15px
+
   - name: Cargo
     context:
       bgColor: *crg
