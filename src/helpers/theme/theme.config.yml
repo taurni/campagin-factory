@@ -2,18 +2,24 @@ context:
   seafoam: &sf "#f5f8f7"
   midnight: &mn "#004152"
   buoylight: &bl "#cdf8eb"
+  buoy: &by "#00BEA2" #title 3
   poollight: &pl "#c2f7ff"
+  pool: &po "#008CE6" #title 2
   sunset: &ss "#ffc8be"
   mist: &mst "#F5F5F0"
+  dancefloor: &df "#5A1EB4" #title 1
+
   action: &actn "#00ecc9"
   action-h: &actn-h "#6dffdc"
   white: &ff "#ffffff"
+  black: &blc "#000000"
   silver: &slvr "#a0aaaf"
   gold: &gld "#b9a879"
-  fontSilja: &f-s "Gorgia ,serif"
+  cargo: &crg "#004895"
+
+  fontSilja: &f-s "Georgia ,serif"
   font: &f-t "Arial, Helvetica, sans-serif"
   fontSize: 14px
-  cargo: &crg "#004895"
   lineHeight: 18px;
 
 variants:
@@ -23,6 +29,7 @@ variants:
   - name: Seafoam
     context:
       bgColor: *sf
+      titleColor: *mn
       textColor: *mn
 #      buttonBg: *actn
 #      buttonColor:
@@ -31,6 +38,7 @@ variants:
   - name: Midnight
     context:
       bgColor: *mn
+      titleColor: *ff
       textColor: *ff
 #      buttonBg: *actn
 #      buttonColor:
@@ -38,6 +46,7 @@ variants:
   - name: Buoylight
     context:
       bgColor: *bl
+      titleColor: *mn
       textColor: *mn
 #      buttonBg: *actn
 #      buttonColor:
@@ -47,6 +56,7 @@ variants:
     label: Pool light
     context:
       bgColor: *pl
+      titleColor: *mn
       textColor: *mn
 #      buttonBg: *mn
 #      buttonColor: *ff
@@ -55,6 +65,7 @@ variants:
   - name: sunset
     context:
       bgColor: *ss
+      titleColor: *mn
       textColor: *mn
       buttonBg: *mn
       buttonColor: *ff
@@ -64,6 +75,7 @@ variants:
   - name: Bronze
     context:
       bgColor: *mn
+      titleColor: *ff
       textColor: *ff
       buttonBg: *actn
       buttonColor: *mn
@@ -71,6 +83,7 @@ variants:
   - name: Silver
     context:
       bgColor: *slvr
+      titleColor: *ff
       textColor: *ff
       buttonBg: *actn
       buttonColor: *mn
@@ -78,6 +91,7 @@ variants:
   - name: Gold
     context:
       bgColor: *gld
+      titleColor: *ff
       textColor: *ff
       buttonBg: *actn
       buttonColor: *mn
@@ -86,39 +100,63 @@ variants:
   - name: mist-slj
     context:
       bgColor: *mst
+      titleColor: *mn
       textColor: *mn
       action: *actn
       font: *f-s
       fontSize: 15px
-      lineHeight: 19px
 
   - name: sunset-slj
     context:
       bgColor: *ss
+      titleColor: *mn
       textColor: *mn
       action: *actn
       font: *f-s
       fontSize: 15px
-      lineHeight: 19px
 
   - name: midnight-slj
     context:
       bgColor: *mn
+      titleColor: *ff
       textColor: *ff
       font: *f-s
       fontSize: 15px
-      lineHeight: 19px
 
   - name: buoylight-slj
     context:
       bgColor: *bl
+      titleColor: *mn
       textColor: *mn
       action: *actn
       font: *f-s
       fontSize: 15px
-      lineHeight: 19px
 
   - name: Cargo
     context:
       bgColor: *crg
+      titleColor: *ff
       textColor: *ff
+
+# Tallink
+  - name: seafoam-tlnk
+    context:
+      bgColor: *sf
+      titleColor: *df
+      titleColor2: *po
+      titleColor3: *by
+      textColor: *blc
+      buttonBg: *df
+      buttonColor: *ff
+      action: *actn
+
+  - name: buoylight-tlnk
+    context:
+      bgColor: *bl
+      titleColor: *df
+      titleColor2: *po
+      titleColor3: *by
+      textColor: *blc
+      buttonBg: *df
+      buttonColor: *ff
+      action: *actn

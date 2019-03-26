@@ -20,15 +20,7 @@
                             <!--[if gte mso 9]>
                             <table cellpadding="0" cellspacing="0" border="0" width="550"><tr> <td valign="top">
                             <![endif]-->
-                            {% include "@block" with {
-                                blockWidth: 266,
-                                blockImage: "https://www.tallink.ee/documents/10192/66843353/344x200_1.png",
-                                imageWidth: 266,
-                                blockTitle: "Lorem ipsum dolor",
-                                blockText: " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, quod, voluptas! Adipisci consectetur ipsa nobis quia voluptatem. Accusamus aliquam animi commodi.",
-                                blockButtonText: "Lorem ipsum",
-                                marginMultiplier: 2,
-                            } %}
+                            {% include "@block" with blockData|merge({titleColor: theme.titleColor2}) %}
                             <!--[if gte mso 9]></td><td valign="top"><![endif]-->
                             <table align="left" border="0" cellpadding="0" cellspacing="0" class="innertable" width="2">
                                 <tbody>
@@ -39,16 +31,7 @@
                                 </tbody>
                             </table>
                             <!--[if gte mso 9]></td><td valign="top"><![endif]-->
-                            {% include "@block" with {
-                                blockWidth: 266,
-                                blockImage: "https://www.tallink.ee/documents/10192/66843353/344x200_b.png",
-                                imageWidth: 266,
-                                align: "right",
-                                blockTitle: "Lorem ipsum dolor",
-                                blockText: " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, quod, voluptas! Adipisci consectetur ipsa nobis quia voluptatem. Accusamus aliquam animi commodi.",
-                                blockButtonText: "Lorem ipsum",
-                                marginMultiplier: 2,
-                            } %}
+                            {% include "@block" with blockData|merge({align: "right", titleColor: theme.titleColor3}) %}
                             <!--[if gte mso 9]></td>
                             <td valign="top">
                             <![endif]-->

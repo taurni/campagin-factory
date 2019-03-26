@@ -1,4 +1,5 @@
-label: Tallink
+order: 1
+label: Combined
 variants:
   - name: default
     hidden: true

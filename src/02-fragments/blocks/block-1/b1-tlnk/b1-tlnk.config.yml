@@ -1,0 +1,10 @@
+label: Tallink
+variants:
+  - name: default
+    hidden: true
+  - name: Seafoam
+    context:
+      theme: '@theme--seafoam-tlnk'
+  - name: buoylight
+    context:
+      theme: '@theme--buoylight-tlnk'
