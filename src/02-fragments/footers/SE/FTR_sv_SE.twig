@@ -6,7 +6,7 @@
     {% set logo = "combined" %}
 {% endif %}
 
-{% embed "@co-footer-template" with { appTitle: "Ladda mobilapplikationen", logo: logo, logoLink: "https://www.tallinksilja.se/hitta-resa"} %}
+{% embed "@co-footer-template" with { appTitle: "ladda ner vår app", logo: logo, logoLink: "https://www.tallinksilja.se/hitta-resa"} %}
     {% block left %}
         <span align="left" style="font-family:Arial, Helvetica, sans-serif; color:{{ theme.textColor }}; font-size:12px; line-height:14px; text-align:left;">{{"KONTAKTA OSS:"|upper}}</span><br>
         <br>
@@ -20,12 +20,18 @@
                 </div>
             {%- endfor %}
             Tallink Silja AB, Box 27295, 115 74 Stockholm, Sverige<br>
-            {% include "@link" with {text:"www.clubone.se", href:"http://www.clubone.se/"} %}<br>
+            {% include "@link" with {text:"www.clubone.se", href:"http://www.tallinksilja.se/club-one"} %}<br>
         {% endif %}
         {# Regular #}
         {% if regular %}
             Tallink Silja AB<br>
             Tel: +46 (0)8 22 21 40<br>
+            E-post: {% include "@link" with {text:"info.sweden@tallinksilja.com", href:"mailto:info.sweden@tallinksilja.com"} %}<br>
+        {% endif %}
+        {# Pretrip #}
+        {% if pretrip %}
+            Tallink Silja AB<br>
+            Tel: +46 (0)8 666 33 33<br>
             E-post: {% include "@link" with {text:"info.sweden@tallinksilja.com", href:"mailto:info.sweden@tallinksilja.com"} %}<br>
         {% endif %}
 
@@ -39,7 +45,8 @@
         Terminalen når du från Gärdets tunnelbanestation, samt<br>
         från busshållplatsen Värtahamnens färjeterminal. Följ<br>
         skyltarna. {% include "@link" with {text:"Se karta över området.", href:"https://www.tallinksilja.se/documents/10192/19365365/terminal-map-update.pdf/066be3fa-3151-4b0d-a8df-65897f50c578"} %} <br>
-
+        <br>
+        Avregistrera dig {% include "@optout" with {text:"här.", href:"http://www.tallinksilja.se/sv/nyhetsbrev-opt-out/?unsub="} -%}<br>
     {% endblock %}
 
     {% block right %}

@@ -42,3 +42,8 @@ variants:
     context:
       clubone: true
       market: tallink
+
+  - name: pretrip silja
+    context:
+      pretrip: true
+      market: silja
