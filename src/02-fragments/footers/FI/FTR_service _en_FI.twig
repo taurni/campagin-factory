@@ -1,0 +1,45 @@
+{% embed "@co-footer-template" with { appTitle: "Download our mobile application", logo: "combined", logoLink: "https://www.tallinksilja.com"} %}
+    {% block left %}
+        <span align="left" style="font-family:Arial, Helvetica, sans-serif; color:{{ theme.textColor }}; font-size:12px; line-height:14px; text-align:left;">{{ "Contact us"|upper }}</span><br>
+        <br>
+        Private customers <br>
+        0600 157 00<br>
+        <br>
+        Club One customers<br>
+        0600 152 68<br>
+        <br>
+        (1,75 €/call + operator default price/min)<br>
+        <br>
+        Opening hours: Mon-Fri 8-19, Sat-Sun 9-17<br>
+        <br>
+        Dear customer, this is an automated email, please do not reply to this address. This email has been sent to the address in your reservation.<br>
+        <br>
+        Address register: Tallink Silja Oy passenger register <br>
+    {% endblock %}
+
+    {% block right %}
+        <span align="left" style="text-transform: uppercase; font-family:Arial, Helvetica, sans-serif; color:#F5F8F7; font-size:12px; line-height:14px; text-align:left;">Follow us</span><br>
+
+        <table border="0" cellpadding="0" cellspacing="0" width="184">
+            <tbody>
+            <tr>
+                <td>{% include "@social" with {media:"fb-s", url:"https://www.facebook.com/siljalinesuomi"} %}</td>
+                <td>{% include "@social" with {media:"inst-s", url:"https://www.instagram.com/siljalinesuomi/"} %}</td>
+                <td>{% include "@social" with {media:"twitter", url:"https://twitter.com/tallinksilja"} %}</td>
+                <td>{% include "@social" with {media:"youtube", url:"https://www.youtube.com/user/tallinksiljasuomi"} %}</td>
+            </tr>
+            <tr>
+                <td>{% include "@social" with {media:"fb-t", url:"https://www.facebook.com/tallinksuomi"} %}</td>
+                <td>{% include "@social" with {media:"inst-t", url:"https://www.instagram.com/tallinksuomi/"} %}</td>
+                <td>{% include "@social" with {media:"linkedin", url:"https://www.linkedin.com/company/tallink-silja-ab"} %}</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td align="left" colspan="4" height="20" style="border-collapse:collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-line-height-rule: exactly; line-height: 20px;" valign="top"><!--[if gte mso 15]>&nbsp;<![endif]--></td>
+            </tr>
+            </tbody>
+        </table>
+
+
+    {% endblock %}
+{% endembed %}
