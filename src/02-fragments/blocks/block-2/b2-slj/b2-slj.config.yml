@@ -8,6 +8,10 @@ variants:
   - name: mist
     context:
       theme: '@theme--mist-slj'
+  - name: mist-cta
+    context:
+      theme: '@theme--mist-slj'
+      cta: true
   - name: Sunset
     context:
       theme: '@theme--sunset-slj'

@@ -1,0 +1,19 @@
+{%- set margin = 8 * marginMultiplier|default(2) %}
+{%- set align = "left" %}
+{%- if buttonAlign %} {% set align = buttonAlign %} {% endif -%}
+
+
+<div class="fragment component" data-component-id="button" style="width: 100%; text-align: {{ align }};" data-component-name="richtext.component_button" contenteditable="false">
+    <!--[if mso]><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td height="{{margin}}">&nbsp;</td></tr><tr><td style="text-align: {{ align }};"><![endif]-->
+    <div style="height: {{margin}}px">&nbsp;</div>
+    <!--[if mso]>
+    <table cellpadding="0" cellspacing="0" border="0">
+        <tr><td width="17" bgcolor="{{ theme.buttonBg|default("#00ecc9") }}">&nbsp;</td><td align="center" height="32" bgcolor="{{ theme.buttonBg|default("#00ecc9") }}">
+    <![endif]-->
+
+    <div class="button-container">
+        <a href="#" style="font-family: {{ theme.font }}; text-decoration:underline; color:#004152; font-size:{{ theme.fontSize }};" data-id="al15428708611975bcb4c">{{ buttonText | default("Call to action") }} →</a>
+    </div>
+    <!--[if mso]></td><td width="17" bgcolor="{{ theme.buttonBg|default("#00ecc9") }}">&nbsp;</td></tr></table><![endif]-->
+    <!--[if mso]></td></tr></table><![endif]-->
+</div>
