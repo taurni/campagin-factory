@@ -57,13 +57,14 @@
     </tr>
     <tr>
         <td class="colspan1" align="left"
-            style="font-family:{{theme.font}}; color:{{ theme.textColor }}; font-size:{{theme.fontSize}}; line-height:{{theme.lineHeight}}; text-align:left;"
+            style="font-family:{{theme.font}}; color:{{ theme.priceColor|default(theme.textColor) }}; font-size:{{theme.fontSize}}; line-height:{{theme.lineHeight}}; text-align:left;"
             valign="top">
-            <span style="display: inline-block; text-decoration: line-through; color:{{ theme.textColor }}">{% include "@text" with {textContent:price.old} %}</span>
-            <span style="display: inline-block; font-family:Arial, Helvetica, sans-serif; color:{{ theme.textColor }}; font-size:16px; line-height:18px; text-align:left; font-weight: bold;">{% include "@text" with {textContent:price.new} %}</span>
+            {% if price.old%}<span style="display: inline-block; text-decoration: line-through; ">{% include "@text" with {textContent:price.old} %}</span>{% endif %}
+            <span style="display: inline-block; font-family:Arial, Helvetica, sans-serif; font-size:16px; line-height:18px; text-align:left; font-weight: bold;">{% include "@text" with {textContent:price.new} %}</span>
         </td>
     </tr>
     {% endif %}
+    {% if not noButton %}
     <tr>
         <td class="colspan1">
             {% if cta %}
@@ -74,5 +75,6 @@
 
         </td>
     </tr>
+    {% endif %}
     </tbody>
 </table>

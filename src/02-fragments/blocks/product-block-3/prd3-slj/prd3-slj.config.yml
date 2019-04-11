@@ -1,0 +1,20 @@
+label: Silja
+context:
+  blockData:
+    blockWidth: 172
+    imageWidth: 172
+    blockImage: "https://www.tallink.ee/documents/10192/66843353/344x200_3.png"
+    blockTitle: "Lorem ipsum dolor"
+    blockText: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab facilis illo molestiae nesciunt."
+    blockButtonText: "Lorem ipsum"
+    price:
+      new: 15,90€
+    noButton: true
+
+variants:
+  - name: default
+    hidden: true
+  - name: Mist
+    context:
+      theme: '@theme--mist-slj'
+

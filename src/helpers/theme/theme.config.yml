@@ -158,6 +158,7 @@ variants:
       buttonBg: *df
       buttonColor: *ff
       action: *actn
+      priceColor: *df
 
   - name: buoylight-tlnk
     context:
@@ -169,3 +170,4 @@ variants:
       buttonBg: *df
       buttonColor: *ff
       action: *actn
+      priceColor: *df
