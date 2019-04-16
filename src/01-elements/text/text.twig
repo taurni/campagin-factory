@@ -1,11 +1,21 @@
-<div class="fragment component" data-component-id="text" data-component-name="richtext.component_text" contenteditable="false">
+{% if styles %}
+    {% set extraStyles %}
+        {% for key, style in styles %}
+            {{ key }}:{{ style }};
+        {% endfor %}
+    {% endset %}
+{% endif %}
+
+
+<div class="fragment component" style="{{ extraStyles }}" data-component-id="text" data-component-name="richtext.component_text"
+     contenteditable="false">
     <div contenteditable="true" class="text-container">
-        {% if textContent%}
+        {% if textContent %}
             {{ textContent }}
         {% else %}
-        {% block textContent %}
-        <p>Please type your text here.</p>
-        {% endblock %}
+            {% block textContent %}
+                <p>Please type your text here.</p>
+            {% endblock %}
         {% endif %}
     </div>
 </div>
