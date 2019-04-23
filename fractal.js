@@ -4,12 +4,6 @@
 /* Create a new Fractal instance and export it for use elsewhereRequire the Fractal module */
 const fractal = module.exports = require('@frctl/fractal').create();
 const mandelbrot = require('@frctl/mandelbrot');
-// const hbs = require('@frctl/handlebars');
-// const localHelpers = require('./config/helpers.js');
-/*const hbs = require('@frctl/handlebars')({
-    helpers: localHelpers
-    /!* other configuration options here *!/
-});*/
 
 /*
  * Project-related metadata
@@ -20,9 +14,7 @@ fractal.set('project.title', 'Tallink Template Factory');
  * Configuring components
  */
 fractal.components.set('path', __dirname + '/src');
-// fractal.components.set('default.preview', '@preview-container');
 fractal.components.set('default.preview', '@preview');
-// fractal.components.set('default.status', 'wip');
 const twigAdapter = require('@frctl/twig')({
     functions:
         {
@@ -69,30 +61,10 @@ fractal.components.set('default.context', {
 
 fractal.components.set('default.collated', true);
 
-// fractal.components.set('statuses', {
-//     prototype: {
-//         key: 'prototype',
-//         label: 'Prototype',
-//         description: 'Do not implement.'
-//     },
-//     wip: {
-//         key: 'wip',
-//         label: 'WIP',
-//         description: 'Work in progress. Implement with caution.'
-//     },
-//     ready: {
-//         key: 'ready',
-//         label: 'Ready',
-//         description: 'Ready to implement.'
-//     }
-// });
-
 /*
  * Configuring documentation pages.
  */
 fractal.docs.set('path', __dirname + '/docs');
-// fractal.docs.set('ext', '.hbs');
-// fractal.docs.engine(hbs);
 
 
 /*
@@ -117,28 +89,3 @@ const projectTheme = mandelbrot(
 );
 
 fractal.web.theme(projectTheme);
-
-
-/*
- * Handle => filesystem path mapping export.
- * https://clearleft.com/posts/the-living-component-library
- */
-
-function exportPaths() {
-    const path = require('path');
-    const fs = require('fs');
-    const map = {};
-    for (let item of fractal.components.flatten()) {
-        map[`@${item.handle}/${item.handle}.twig`] = path.relative(process.cwd(), item.viewPath);
-    }
-    fs.writeFileSync('dist/components-map.json', JSON.stringify(map, null, 2), 'utf8');
-}
-
-// fractal.components.on('updated', function(){
-//     exportPaths();
-// });
-
-fractal.cli.command('pathmap', function(opts, done){
-    exportPaths();
-    done();
-});
