@@ -1,22 +1,22 @@
-#preview: "@preview--header"
-preview: "@preview--container"
+preview: "@preview--header"
 collated: false
 context:
-  groupId: 1539080342105
+  groupId: 1539080342103
   textColor: "#ffffff"
 
-  imageHref: "https://www.tallink.ee/et/club-one/"
-  buttonHref: "https://www.tallink.ee/et/club-one?col=1&amp;colr=/et/club-one"
-  buttonText: logi&nbsp;sisse
-  levelName: Pronkstase
-  levelPoints: Tasemepunktid
-  levelEnd: Taseme lõpp
-  bonusPoints: Boonuspunktid
-  expThisMonth: Sel kuul aeguvad
-  expNxtMonth: Järgmisel kuul aeguvad
-  manageAccount: Halda oma kontot ja vaata parimaid pakkumisi just Sulle
+  imageHref: "https://www.tallink.lv/lt/club-one"
+  buttonHref: "https://www.tallink.lv/lt/club-one?col=1&colr=/et/club-one"
+  buttonText: Įeiti
+  levelName: Bronze lygis
+  levelPoints: Lygmens taškai
+  levelEnd: Lygmens galiojimo terminas
+  bonusPoints: Bonusiniai taškai
+  expThisMonth: Baigsis šį mėnesį
+  expNxtMonth: Baigsis kitą mėnesį
+  manageAccount: Jūsų Club One profilis ir geriausi pasiūlymai
   theme: "@theme--bronze"
   logo: co-tallink
+
 
   versions:
     - label: B Lp0 Bp1 Exp1
@@ -39,7 +39,7 @@ context:
       index: 4
       expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.profile.cusTierLevel === 'SILVER')) && (/*@nlGroup*/(context.profile.cusLevelPoints !== 0) || (context.profile.cusBonusPoints !== 0)) && (/*@nlGroup*/(context.profile.cusCurrentMonthsExpPoints !== 0) || (context.profile.cusNextMonthsExpPoints !== 0))"
       theme: "@theme--silver"
-      levelName: Hõbetase
+      levelName: Silver lygis
       points: true
       pointsExpire: true
       levelExpire: true
@@ -47,21 +47,21 @@ context:
       index: 5
       expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.profile.cusTierLevel === 'SILVER')) && (/*@nlGroup*/(context.profile.cusLevelPoints !== 0) || (context.profile.cusBonusPoints !== 0)) && (/*@nlGroup*/(context.profile.cusCurrentMonthsExpPoints === 0) && (context.profile.cusNextMonthsExpPoints === 0))"
       theme: "@theme--silver"
-      levelName: Hõbetase
+      levelName: Silver lygis
       points: true
       levelExpire: true
     - label: S All 0
       index: 6
       expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.profile.cusTierLevel === 'SILVER')) && (context.profile.cusLevelPoints === 0) && (context.profile.cusBonusPoints === 0) && (/*@nlGroup*/(context.profile.cusCurrentMonthsExpPoints === 0) && (context.profile.cusNextMonthsExpPoints === 0))"
       theme: "@theme--silver"
-      levelName: Hõbetase
+      levelName: Silver lygis
       levelExpire: true
 
     - label: G All 1
       index: 7
       expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.profile.cusTierLevel === 'GOLD')) && (/*@nlGroup*/(context.profile.cusLevelPoints !== 0) || (context.profile.cusBonusPoints !== 0)) && (/*@nlGroup*/(context.profile.cusCurrentMonthsExpPoints !== 0) || (context.profile.cusNextMonthsExpPoints !== 0))"
       theme: "@theme--gold"
-      levelName: Kuldtase
+      levelName: Gold lygis
       points: true
       pointsExpire: true
       levelExpire: true
@@ -69,14 +69,14 @@ context:
       index: 8
       expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.profile.cusTierLevel === 'GOLD')) && (/*@nlGroup*/(context.profile.cusLevelPoints !== 0) || (context.profile.cusBonusPoints !== 0)) && (/*@nlGroup*/(context.profile.cusCurrentMonthsExpPoints === 0) && (context.profile.cusNextMonthsExpPoints === 0))"
       theme: "@theme--gold"
-      levelName: Kuldtase
+      levelName: Gold lygis
       points: true
       levelExpire: true
     - label: G All 0
       index: 9
       expression: "/*@nlGroup*/(/*@nlEnumeration*/(context.profile.cusTierLevel === 'GOLD')) && (context.profile.cusLevelPoints === 0) && (context.profile.cusBonusPoints === 0) && (/*@nlGroup*/(context.profile.cusCurrentMonthsExpPoints === 0) && (context.profile.cusNextMonthsExpPoints === 0))"
       theme: "@theme--gold"
-      levelName: Kuldtase
+      levelName: Gold lygis
       levelExpire: true
 
     - label: Default
@@ -87,6 +87,7 @@ context:
       levelExpire: true
       points: true
       pointsExpire: true
+
 variants:
   - name: default
     context:

@@ -15,6 +15,7 @@ context:
   expNxtMonth: Järgmisel kuul aeguvad
   manageAccount: Halda oma kontot ja vaata parimaid pakkumisi just Sulle
   theme: "@theme--bronze"
+  logo: co-tallink
 
   versions:
     - label: B Lp0 Bp1 Exp1
