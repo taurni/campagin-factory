@@ -70,10 +70,6 @@
                                 {% if points %}
                                 <tr>
                                     <td align="right" style="border-collapse: collapse; color:{{ theme.textColor|default("#ffffff")}}; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 18px; padding: 0; vertical-align: top;">
-                                        {#{{levelPoints|upper}}:#}
-                                        {#<a style="color: {{ theme.textColor|default("#ffffff")}}; cursor: text">{% include "@dyn-field" with { field: "level-points"} %}</a>#}
-                                        {#{%- set text %}{%- include "@dyn-field" with { field: "level-points"} -%} {%- endset %}#}
-                                        {#{% include "@static-text" with text %}#}
                                         <table>
                                             <tr>
                                                 <td align="right" style="border-collapse: collapse; color:{{ theme.textColor|default("#ffffff")}}; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 18px; padding: 0; vertical-align: top;">
